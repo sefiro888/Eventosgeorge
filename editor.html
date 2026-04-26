@@ -125,6 +125,40 @@
         }
       }
     };
+    fallbackContent.imagenes = {
+      "index": [
+        { "nombre": "Galeria 1", "src": "" },
+        { "nombre": "Galeria 2", "src": "" },
+        { "nombre": "Galeria 3", "src": "" },
+        { "nombre": "Galeria 4", "src": "" },
+        { "nombre": "Galeria 5", "src": "" }
+      ],
+      "bodas": [
+        { "nombre": "Decoracion para bodas", "src": "" },
+        { "nombre": "Galeria bodas 1", "src": "" },
+        { "nombre": "Galeria bodas 2", "src": "" },
+        { "nombre": "Galeria bodas 3", "src": "" }
+      ],
+      "decoracion": [
+        { "nombre": "Arcos florales", "src": "" },
+        { "nombre": "Telones y photocall", "src": "" },
+        { "nombre": "Mesas y accesorios", "src": "" },
+        { "nombre": "Galeria decoracion 1", "src": "" },
+        { "nombre": "Galeria decoracion 2", "src": "" },
+        { "nombre": "Galeria decoracion 3", "src": "" }
+      ],
+      "sonido": [
+        { "nombre": "Equipo de sonido y luces", "src": "" },
+        { "nombre": "Pack sonido 1", "src": "" },
+        { "nombre": "Pack sonido 2", "src": "" }
+      ],
+      "baby-shower": [
+        { "nombre": "Mesa baby shower", "src": "" },
+        { "nombre": "Decoracion baby shower 1", "src": "" },
+        { "nombre": "Decoracion baby shower 2", "src": "" }
+      ],
+      "contacto": []
+    };
     var state = null;
     var active = "global";
     var labels = {
@@ -266,6 +300,7 @@
 
         form.appendChild(wrapper);
       });
+      renderImageList(form);
     }
 
     function syncForm() {
@@ -273,6 +308,11 @@
       var data = getActiveData();
       document.querySelectorAll("#form [data-key]").forEach(function (input) {
         data[input.dataset.key] = input.value;
+      });
+      document.querySelectorAll("#form [data-image-index]").forEach(function (input) {
+        var list = getActiveImages();
+        var item = list[Number(input.dataset.imageIndex)];
+        if (item) item[input.dataset.imageField] = input.value;
       });
     }
 
@@ -295,6 +335,7 @@
 
     function startEditor(json) {
       state = json;
+      if (!state.imagenes) state.imagenes = JSON.parse(JSON.stringify(fallbackContent.imagenes));
       renderTabs();
       renderForm();
     }
@@ -308,6 +349,85 @@
         img.removeAttribute("src");
         preview.style.display = "none";
       }
+    }
+
+    function getActiveImages() {
+      if (active === "global") return [];
+      if (!state.imagenes) state.imagenes = {};
+      if (!state.imagenes[active]) state.imagenes[active] = [];
+      return state.imagenes[active];
+    }
+
+    function renderImageList(form) {
+      var list = getActiveImages();
+      if (!list.length) return;
+
+      var title = document.createElement("h2");
+      title.textContent = "Imagenes de esta pagina";
+      title.style.marginTop = "26px";
+      form.appendChild(title);
+
+      list.forEach(function (item, index) {
+        var wrapper = document.createElement("div");
+        wrapper.className = "field";
+
+        var nameLabel = document.createElement("label");
+        nameLabel.textContent = "Nombre";
+        var nameInput = document.createElement("input");
+        nameInput.dataset.imageIndex = index;
+        nameInput.dataset.imageField = "nombre";
+        nameInput.value = item.nombre || "";
+
+        var srcLabel = document.createElement("label");
+        srcLabel.textContent = item.nombre || ("Imagen " + (index + 1));
+        var srcInput = document.createElement("input");
+        srcInput.dataset.imageIndex = index;
+        srcInput.dataset.imageField = "src";
+        srcInput.value = item.src || "";
+
+        var tools = document.createElement("div");
+        tools.className = "image-tools";
+        var file = document.createElement("input");
+        file.type = "file";
+        file.accept = "image/*";
+        var clear = document.createElement("button");
+        clear.type = "button";
+        clear.className = "btn secondary";
+        clear.textContent = "Quitar foto";
+
+        var preview = document.createElement("div");
+        preview.className = "preview";
+        var img = document.createElement("img");
+        preview.appendChild(img);
+        updatePreview(srcInput, preview, img);
+
+        file.addEventListener("change", function () {
+          var selected = file.files && file.files[0];
+          if (!selected) return;
+          var reader = new FileReader();
+          reader.onload = function () {
+            srcInput.value = reader.result;
+            updatePreview(srcInput, preview, img);
+          };
+          reader.readAsDataURL(selected);
+        });
+
+        clear.addEventListener("click", function () {
+          srcInput.value = "";
+          file.value = "";
+          updatePreview(srcInput, preview, img);
+        });
+
+        tools.appendChild(file);
+        tools.appendChild(clear);
+        wrapper.appendChild(nameLabel);
+        wrapper.appendChild(nameInput);
+        wrapper.appendChild(srcLabel);
+        wrapper.appendChild(srcInput);
+        wrapper.appendChild(tools);
+        wrapper.appendChild(preview);
+        form.appendChild(wrapper);
+      });
     }
   </script>
 </body>

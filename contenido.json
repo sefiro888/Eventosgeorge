@@ -59,5 +59,102 @@
       "heroText": "Solicita tu presupuesto gratuito. Respuesta personalizada en menos de 24 horas.",
       "heroImage": ""
     }
+  },
+  "imagenes": {
+    "index": [
+      {
+        "nombre": "Galeria 1",
+        "src": ""
+      },
+      {
+        "nombre": "Galeria 2",
+        "src": ""
+      },
+      {
+        "nombre": "Galeria 3",
+        "src": ""
+      },
+      {
+        "nombre": "Galeria 4",
+        "src": ""
+      },
+      {
+        "nombre": "Galeria 5",
+        "src": ""
+      }
+    ],
+    "bodas": [
+      {
+        "nombre": "Decoracion para bodas",
+        "src": ""
+      },
+      {
+        "nombre": "Galeria bodas 1",
+        "src": ""
+      },
+      {
+        "nombre": "Galeria bodas 2",
+        "src": ""
+      },
+      {
+        "nombre": "Galeria bodas 3",
+        "src": ""
+      }
+    ],
+    "decoracion": [
+      {
+        "nombre": "Arcos florales",
+        "src": ""
+      },
+      {
+        "nombre": "Telones y photocall",
+        "src": ""
+      },
+      {
+        "nombre": "Mesas y accesorios",
+        "src": ""
+      },
+      {
+        "nombre": "Galeria decoracion 1",
+        "src": ""
+      },
+      {
+        "nombre": "Galeria decoracion 2",
+        "src": ""
+      },
+      {
+        "nombre": "Galeria decoracion 3",
+        "src": ""
+      }
+    ],
+    "sonido": [
+      {
+        "nombre": "Equipo de sonido y luces",
+        "src": ""
+      },
+      {
+        "nombre": "Pack sonido 1",
+        "src": ""
+      },
+      {
+        "nombre": "Pack sonido 2",
+        "src": ""
+      }
+    ],
+    "baby-shower": [
+      {
+        "nombre": "Mesa baby shower",
+        "src": ""
+      },
+      {
+        "nombre": "Decoracion baby shower 1",
+        "src": ""
+      },
+      {
+        "nombre": "Decoracion baby shower 2",
+        "src": ""
+      }
+    ],
+    "contacto": []
   }
 }

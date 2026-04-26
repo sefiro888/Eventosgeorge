@@ -1,72 +1,74 @@
-# Como editar la web sin tocar HTML
+# Como probar y editar la web
 
-Esta version incluye tres piezas nuevas:
+Esta version esta pensada para que una persona sin conocimientos no tenga que tocar GitHub ni archivos tecnicos.
 
-- `contenido.json`: archivo con textos, telefono, email, WhatsApp, Instagram e imagenes principales.
-- `contenido-loader.js`: aplica esos datos automaticamente sobre las paginas HTML.
-- `editor.html`: pantalla sencilla para modificar `contenido.json`.
-- `dev-server.js`: servidor local opcional para probar la web en este ordenador.
+La forma recomendada por ahora es:
 
-## Pasos para editar
+1. La persona revisa la web publicada.
+2. Te dice por WhatsApp, email o llamada que textos/fotos quiere cambiar.
+3. Tu haces los cambios con `editor.html` o me los pasas para colocarlos.
+4. Subes el archivo actualizado a GitHub.
 
-1. Abre `editor.html` en el navegador. Puede abrirse directamente como archivo, sin servidor local.
-2. Cambia los campos que quieras.
-3. Para cambiar una foto, entra en la pagina correspondiente y usa el selector del campo `Foto principal`.
-4. Pulsa `Descargar contenido.json`.
-5. Sube ese archivo al repositorio sustituyendo el `contenido.json` anterior.
-6. GitHub Pages publicara los cambios.
+## Enlaces importantes
 
-## Archivos que hay que subir a GitHub
+Web publicada:
 
-Sube todo el contenido de esta carpeta al repositorio:
+`https://sefiro888.github.io/Eventosgeorge/index.html`
 
-- `index.html`
-- `bodas.html`
-- `contacto.html`
-- `decoracion.html`
-- `sonido.html`
-- `baby-shower.html`
-- `contenido.json`
-- `contenido-loader.js`
-- `editor.html`
-- `README-editar-web.md`
-- `dev-server.js` si quieres conservar la prueba local
+Editor sencillo:
 
-## Como usar fotos
+`https://sefiro888.github.io/Eventosgeorge/editor.html`
 
-Tienes dos opciones:
+Modo con boton de editar:
 
-### Opcion facil
+`https://sefiro888.github.io/Eventosgeorge/index.html?editar`
 
-En `editor.html`, pulsa el selector de archivo del campo `Foto principal`, elige una imagen del ordenador y luego pulsa `Descargar contenido.json`.
+Al abrir la web con `?editar`, aparece un boton abajo a la izquierda que lleva al editor.
 
-La foto se guarda dentro de `contenido.json`. Es lo mas sencillo porque solo tienes que subir un archivo.
+## Que se puede cambiar desde el editor
 
-### Opcion mas ordenada
+- Telefono
+- WhatsApp
+- Email
+- Instagram
+- Titulos principales
+- Textos principales
+- Foto principal de cada pagina
+- Imagenes por seccion, preparadas para mas adelante
 
-Sube fotos al repositorio, por ejemplo:
+## Como guardar cambios
 
-`imagenes/portada.jpg`
+1. Abre `editor.html`.
+2. Cambia los campos necesarios.
+3. Pulsa `Descargar contenido.json`.
+4. Sube ese `contenido.json` a GitHub sustituyendo el anterior.
+5. Espera 1-2 minutos a que GitHub Pages actualice.
 
-Luego escribe esa ruta en el campo `Foto principal`.
+## Como pedir cambios a la persona
 
-Esta opcion mantiene `contenido.json` mas pequeno.
+Puedes pedirle los cambios asi:
 
-## Importante sobre GitHub Pages
+```text
+Pagina:
+Seccion:
+Texto actual:
+Texto nuevo:
+Foto nueva:
+Comentario:
+```
 
-GitHub Pages no permite que una pagina guarde cambios directamente en el repositorio sin iniciar sesion ni usar una API.
+Para fotos, que las mande con una explicacion clara:
 
-Por eso el editor hace esto:
+```text
+sonido-luces-1: equipo de sonido montado
+decoracion-arco-1: arco floral blanco
+baby-shower-1: mesa decorada
+```
 
-1. Te deja editar visualmente.
-2. Pulsa `Descargar contenido.json`.
-3. Subes ese `contenido.json` a GitHub.
-4. La web publicada lee el nuevo archivo y cambia los textos/fotos.
+## Archivos importantes
 
-En este ordenador tambien puedes abrirlo con esta ruta:
-
-`C:\Users\sefir\Documents\GitHub\EVENTOSGEORGE\editor.html`
-
-## Importante
-
-Los HTML originales siguen funcionando. Este sistema esta preparado para editar primero lo mas habitual: datos de contacto, titulos principales, textos de cabecera e imagen principal de cada pagina.
+- `contenido.json`: textos, datos e imagenes editables.
+- `contenido-loader.js`: aplica esos cambios en la web.
+- `editor.html`: editor sencillo.
+- `imagenes/servicios`: carpetas preparadas para futuras fotos ordenadas.
+- `imagenes/uploads`: carpeta preparada para futuras subidas.
