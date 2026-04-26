@@ -16,6 +16,7 @@
     });
 
   addAdminLink();
+  addMobileBudgetFixes();
   addHelpChat();
 
   function getPageName() {
@@ -178,6 +179,47 @@
     ].join(";");
     document.addEventListener("DOMContentLoaded", function () {
       document.body.appendChild(link);
+    });
+  }
+
+  function addMobileBudgetFixes() {
+    document.addEventListener("DOMContentLoaded", function () {
+      if (document.getElementById("eg-mobile-budget-fix")) return;
+
+      var style = document.createElement("style");
+      style.id = "eg-mobile-budget-fix";
+      style.textContent = [
+        "html,body{max-width:100%;overflow-x:hidden}",
+        "*,*::before,*::after{box-sizing:border-box}",
+        "@media(max-width:768px){",
+        "body{overflow-x:hidden}",
+        ".contact-section{display:block!important;width:100%!important;max-width:100%!important;margin-top:48px!important;padding:24px 14px!important;overflow:visible!important}",
+        ".fbox,.contact-section form,.fr2,.fg{width:100%!important;max-width:100%!important;min-width:0!important}",
+        ".fbox{padding:24px 14px!important;overflow:visible!important}",
+        ".fr2{display:grid!important;grid-template-columns:1fr!important;gap:0!important}",
+        ".fg input,.fg select,.fg textarea{display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;font-size:16px!important;line-height:1.35!important;padding:14px 12px!important}",
+        ".fg select{min-height:50px!important;white-space:normal!important;background-position:right 12px center!important;padding-right:40px!important}",
+        ".fg textarea{min-height:130px!important;resize:vertical!important}",
+        ".fsend,.btn-gold,.card-cta{display:flex!important;width:100%!important;max-width:100%!important;align-items:center!important;justify-content:center!important;text-align:center!important;white-space:normal!important;line-height:1.35!important;padding:15px 14px!important}",
+        ".price-table,.price-table tbody,.price-table tr,.price-table td{display:block!important;width:100%!important;max-width:100%!important}",
+        ".price-table{border-collapse:separate!important;border-spacing:0 12px!important;margin-top:26px!important}",
+        ".price-table thead,.price-table th{display:none!important}",
+        ".price-table tr{background:rgba(255,255,255,.025)!important;border:1px solid rgba(201,168,76,.16)!important;border-radius:4px!important;overflow:hidden!important}",
+        ".price-table td{padding:12px 14px!important;border-bottom:1px solid rgba(255,255,255,.08)!important}",
+        ".price-table td:last-child{border-bottom:0!important}",
+        ".price-badge{display:inline-flex!important;width:auto!important;max-width:100%!important;white-space:normal!important}",
+        "#nav{gap:10px!important}",
+        "#nav .ncta{max-width:142px!important;padding:9px 10px!important;font-size:.58rem!important;line-height:1.25!important;text-align:center!important;white-space:normal!important}",
+        ".wa{right:14px!important;bottom:14px!important;width:50px!important;height:50px!important}",
+        "}",
+        "@media(max-width:420px){",
+        ".contact-section{padding-left:12px!important;padding-right:12px!important}",
+        ".fbox{padding-left:12px!important;padding-right:12px!important}",
+        "#nav .ncta{max-width:118px!important;font-size:.55rem!important;letter-spacing:.1em!important}",
+        ".fg label{line-height:1.25!important}",
+        "}"
+      ].join("");
+      document.head.appendChild(style);
     });
   }
 
