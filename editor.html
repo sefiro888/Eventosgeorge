@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor de contenido - Eventos George</title>
+  <style>
+    :root{color-scheme:dark;--gold:#c9a84c;--black:#090909;--panel:#171717;--line:#333;--text:#f5f1e8;--muted:#aaa}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--black);color:var(--text);font-family:Arial,sans-serif;line-height:1.5}
+    header{padding:28px 22px;border-bottom:1px solid var(--line);background:#111}
+    main{max-width:1120px;margin:0 auto;padding:24px}
+    h1{margin:0 0 8px;font-size:28px}
+    h2{margin:0 0 16px;font-size:20px;color:var(--gold)}
+    p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:260px 1fr;gap:20px;align-items:start}
+    nav{position:sticky;top:16px;background:var(--panel);border:1px solid var(--line);padding:12px;border-radius:8px}
+    nav button{width:100%;display:block;margin:4px 0;padding:12px;border:1px solid transparent;border-radius:6px;background:transparent;color:var(--text);text-align:left;cursor:pointer}
+    nav button.active,nav button:hover{border-color:var(--gold);background:rgba(201,168,76,.1)}
+    section{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px;margin-bottom:18px}
+    label{display:block;margin:14px 0 6px;color:#ddd;font-size:13px}
+    input,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:6px;background:#0d0d0d;color:var(--text);font:inherit}
+    textarea{min-height:92px;resize:vertical}
+    .field{margin-bottom:14px}
+    .image-tools{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;margin-top:8px}
+    .image-tools input{padding:10px}
+    .preview{display:none;margin-top:10px;max-width:280px;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#0d0d0d}
+    .preview img{display:block;width:100%;height:auto}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{border:0;border-radius:6px;padding:13px 18px;background:var(--gold);color:#111;font-weight:700;cursor:pointer}
+    .btn.secondary{background:#2a2a2a;color:var(--text);border:1px solid var(--line)}
+    .note{padding:14px;border-left:3px solid var(--gold);background:rgba(201,168,76,.08);border-radius:4px;color:#ddd;margin-bottom:18px}
+    .small{font-size:13px;color:var(--muted);margin-top:8px}
+    @media(max-width:780px){.grid{grid-template-columns:1fr}nav{position:static}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Editor de contenido</h1>
+    <p>Cambia textos, contacto e imagen principal sin tocar los HTML grandes.</p>
+  </header>
+
+  <main>
+    <div class="note">
+      Este editor no puede guardar directamente en GitHub Pages. Al terminar, pulsa <strong>Descargar contenido.json</strong> y sube ese archivo al repositorio sustituyendo el anterior.
+    </div>
+
+    <div class="grid">
+      <nav id="tabs"></nav>
+      <div>
+        <section id="form"></section>
+        <section>
+          <h2>Guardar cambios</h2>
+          <p class="small">La web publicada leera este archivo automaticamente cuando este subido junto a los HTML.</p>
+          <div class="actions">
+            <button class="btn" id="download">Descargar contenido.json</button>
+            <button class="btn secondary" id="preview">Ver pagina actual</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    var fallbackContent = {
+      "global": {
+        "nombre": "Eventos George",
+        "telefono": "666 21 35 03",
+        "telefonoHref": "+34666213503",
+        "whatsapp": "34666213503",
+        "whatsappMensaje": "Hola Jorge, quiero informacion sobre mi evento.",
+        "email": "eventosgeorge73@gmail.com",
+        "instagramUrl": "https://www.instagram.com/eventosgeorge73",
+        "instagramTexto": "@eventosgeorge73"
+      },
+      "paginas": {
+        "index": {
+          "title": "Eventos George - Maestro de Ceremonias y Decoracion en Malaga",
+          "description": "Jorge Fernandez: maestro de ceremonias, decorador y organizador de eventos en Malaga.",
+          "heroEyebrow": "Malaga & toda Andalucia",
+          "heroTitle": "Tu evento,<br><em>unico</em> e<br><strong>inolvidable</strong>",
+          "heroSignature": "Jorge Fernandez - Maestro de Ceremonias",
+          "heroText": "Mas de 15 anos creando celebraciones perfectas en Malaga y toda Andalucia. Bodas, cumpleanos, baby showers y eventos corporativos.",
+          "heroImage": ""
+        },
+        "bodas": {
+          "title": "Bodas y Maestro de Ceremonias | Eventos George Malaga",
+          "description": "Maestro de ceremonias para bodas en Malaga y Andalucia.",
+          "heroEyebrow": "Ceremonias con alma",
+          "heroTitle": "Bodas con<br><em>emocion</em>",
+          "heroText": "Conduccion elegante, cercana y cuidada para que cada momento tenga ritmo, sentido y emocion.",
+          "heroImage": ""
+        },
+        "decoracion": {
+          "title": "Decoracion de Eventos | Eventos George Malaga",
+          "description": "Decoracion para bodas, fiestas, photocalls y celebraciones en Malaga.",
+          "heroEyebrow": "Espacios que impresionan",
+          "heroTitle": "Decoracion<br><em>especial</em>",
+          "heroText": "Arcos, flores, telas, photocalls y detalles pensados para transformar tu celebracion.",
+          "heroImage": ""
+        },
+        "sonido": {
+          "title": "Sonido y Luces | Eventos George Malaga",
+          "description": "Sonido, iluminacion y speaker para eventos en Malaga.",
+          "heroEyebrow": "Ritmo, voz y energia",
+          "heroTitle": "Sonido y<br><em>luces</em>",
+          "heroText": "Equipo tecnico y presencia profesional para que tu evento se escuche y se viva como merece.",
+          "heroImage": ""
+        },
+        "baby-shower": {
+          "title": "Baby Shower | Eventos George Malaga",
+          "description": "Decoracion y organizacion de baby shower en Malaga.",
+          "heroEyebrow": "Celebraciones dulces",
+          "heroTitle": "Baby shower<br><em>inolvidable</em>",
+          "heroText": "Creamos un ambiente cuidado, bonito y cercano para celebrar la llegada del bebe.",
+          "heroImage": ""
+        },
+        "contacto": {
+          "title": "Contacto y Presupuesto Gratis | Eventos George Malaga",
+          "description": "Solicita presupuesto gratuito para tu evento en Malaga.",
+          "heroEyebrow": "Estamos aqui para ti",
+          "heroTitle": "Hablemos de<br>tu <em>evento</em>",
+          "heroText": "Solicita tu presupuesto gratuito. Respuesta personalizada en menos de 24 horas.",
+          "heroImage": ""
+        }
+      }
+    };
+    var state = null;
+    var active = "global";
+    var labels = {
+      global: "Datos generales",
+      index: "Inicio",
+      bodas: "Bodas",
+      decoracion: "Decoracion",
+      sonido: "Sonido",
+      "baby-shower": "Baby Shower",
+      contacto: "Contacto"
+    };
+    var fieldLabels = {
+      nombre: "Nombre de la empresa",
+      telefono: "Telefono visible",
+      telefonoHref: "Telefono para llamadas",
+      whatsapp: "Numero de WhatsApp",
+      whatsappMensaje: "Mensaje inicial de WhatsApp",
+      email: "Email",
+      instagramUrl: "Enlace de Instagram",
+      instagramTexto: "Texto de Instagram",
+      title: "Titulo SEO de la pagina",
+      description: "Descripcion SEO de la pagina",
+      heroEyebrow: "Texto pequeno superior",
+      heroTitle: "Titulo principal",
+      heroSignature: "Firma bajo el titulo",
+      heroText: "Texto principal",
+      heroImage: "Foto principal"
+    };
+
+    loadContent();
+
+    document.getElementById("download").addEventListener("click", function () {
+      syncForm();
+      var blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = "contenido.json";
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById("preview").addEventListener("click", function () {
+      var file = active === "global" || active === "index" ? "index.html" : active + ".html";
+      window.open(file, "_blank");
+    });
+
+    function renderTabs() {
+      var tabs = document.getElementById("tabs");
+      tabs.innerHTML = "";
+      Object.keys(labels).forEach(function (key) {
+        var button = document.createElement("button");
+        button.textContent = labels[key];
+        button.className = key === active ? "active" : "";
+        button.onclick = function () {
+          syncForm();
+          active = key;
+          renderTabs();
+          renderForm();
+        };
+        tabs.appendChild(button);
+      });
+    }
+
+    function renderForm() {
+      var data = getActiveData();
+      var form = document.getElementById("form");
+      form.innerHTML = "<h2>" + labels[active] + "</h2>";
+      Object.keys(data).forEach(function (key) {
+        var id = "field_" + key;
+        var wrapper = document.createElement("div");
+        wrapper.className = "field";
+        var label = document.createElement("label");
+        label.setAttribute("for", id);
+        label.textContent = fieldLabels[key] || key;
+        var input = key.toLowerCase().includes("text") || key.toLowerCase().includes("description") || key.toLowerCase().includes("title")
+          ? document.createElement("textarea")
+          : document.createElement("input");
+        input.id = id;
+        input.dataset.key = key;
+        input.value = data[key] || "";
+        wrapper.appendChild(label);
+        wrapper.appendChild(input);
+
+        if (key.toLowerCase().includes("image")) {
+          var tools = document.createElement("div");
+          tools.className = "image-tools";
+
+          var file = document.createElement("input");
+          file.type = "file";
+          file.accept = "image/*";
+          file.id = id + "_file";
+
+          var clear = document.createElement("button");
+          clear.type = "button";
+          clear.className = "btn secondary";
+          clear.textContent = "Quitar foto";
+
+          var preview = document.createElement("div");
+          preview.className = "preview";
+          var img = document.createElement("img");
+          preview.appendChild(img);
+
+          updatePreview(input, preview, img);
+
+          file.addEventListener("change", function () {
+            var selected = file.files && file.files[0];
+            if (!selected) return;
+            if (!selected.type.startsWith("image/")) {
+              alert("El archivo elegido no parece una imagen.");
+              file.value = "";
+              return;
+            }
+
+            var reader = new FileReader();
+            reader.onload = function () {
+              input.value = reader.result;
+              updatePreview(input, preview, img);
+            };
+            reader.readAsDataURL(selected);
+          });
+
+          clear.addEventListener("click", function () {
+            input.value = "";
+            file.value = "";
+            updatePreview(input, preview, img);
+          });
+
+          tools.appendChild(file);
+          tools.appendChild(clear);
+          wrapper.appendChild(tools);
+          wrapper.appendChild(preview);
+
+          var help = document.createElement("p");
+          help.className = "small";
+          help.textContent = "Puedes pegar una ruta como imagenes/foto.jpg o elegir una foto del ordenador. Si eliges una foto, se guarda dentro de contenido.json.";
+          wrapper.appendChild(help);
+        }
+
+        form.appendChild(wrapper);
+      });
+    }
+
+    function syncForm() {
+      if (!state) return;
+      var data = getActiveData();
+      document.querySelectorAll("#form [data-key]").forEach(function (input) {
+        data[input.dataset.key] = input.value;
+      });
+    }
+
+    function getActiveData() {
+      if (active === "global") return state.global;
+      return state.paginas[active];
+    }
+
+    function loadContent() {
+      fetch("contenido.json", { cache: "no-store" })
+        .then(function (response) {
+          if (!response.ok) throw new Error("No se pudo leer contenido.json");
+          return response.json();
+        })
+        .then(startEditor)
+        .catch(function () {
+          startEditor(JSON.parse(JSON.stringify(fallbackContent)));
+        });
+    }
+
+    function startEditor(json) {
+      state = json;
+      renderTabs();
+      renderForm();
+    }
+
+    function updatePreview(input, preview, img) {
+      var value = input.value || "";
+      if (value.startsWith("data:image/") || value.match(/\.(jpg|jpeg|png|webp|gif)$/i)) {
+        img.src = value;
+        preview.style.display = "block";
+      } else {
+        img.removeAttribute("src");
+        preview.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

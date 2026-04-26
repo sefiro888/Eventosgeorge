@@ -1,0 +1,63 @@
+{
+  "global": {
+    "nombre": "Eventos George",
+    "telefono": "666 21 35 03",
+    "telefonoHref": "+34666213503",
+    "whatsapp": "34666213503",
+    "whatsappMensaje": "Hola Jorge, quiero informacion sobre mi evento.",
+    "email": "eventosgeorge73@gmail.com",
+    "instagramUrl": "https://www.instagram.com/eventosgeorge73",
+    "instagramTexto": "@eventosgeorge73"
+  },
+  "paginas": {
+    "index": {
+      "title": "Eventos George - Maestro de Ceremonias y Decoracion en Malaga",
+      "description": "Jorge Fernandez: maestro de ceremonias, decorador y organizador de eventos en Malaga.",
+      "heroEyebrow": "Malaga & toda Andalucia",
+      "heroTitle": "Tu evento,<br><em>unico</em> e<br><strong>inolvidable</strong>",
+      "heroSignature": "Jorge Fernandez - Maestro de Ceremonias",
+      "heroText": "Mas de 15 anos creando celebraciones perfectas en Malaga y toda Andalucia. Bodas, cumpleanos, baby showers y eventos corporativos.",
+      "heroImage": ""
+    },
+    "bodas": {
+      "title": "Bodas y Maestro de Ceremonias | Eventos George Malaga",
+      "description": "Maestro de ceremonias para bodas en Malaga y Andalucia.",
+      "heroEyebrow": "Ceremonias con alma",
+      "heroTitle": "Bodas con<br><em>emocion</em>",
+      "heroText": "Conduccion elegante, cercana y cuidada para que cada momento tenga ritmo, sentido y emocion.",
+      "heroImage": ""
+    },
+    "decoracion": {
+      "title": "Decoracion de Eventos | Eventos George Malaga",
+      "description": "Decoracion para bodas, fiestas, photocalls y celebraciones en Malaga.",
+      "heroEyebrow": "Espacios que impresionan",
+      "heroTitle": "Decoracion<br><em>especial</em>",
+      "heroText": "Arcos, flores, telas, photocalls y detalles pensados para transformar tu celebracion.",
+      "heroImage": ""
+    },
+    "sonido": {
+      "title": "Sonido y Luces | Eventos George Malaga",
+      "description": "Sonido, iluminacion y speaker para eventos en Malaga.",
+      "heroEyebrow": "Ritmo, voz y energia",
+      "heroTitle": "Sonido y<br><em>luces</em>",
+      "heroText": "Equipo tecnico y presencia profesional para que tu evento se escuche y se viva como merece.",
+      "heroImage": ""
+    },
+    "baby-shower": {
+      "title": "Baby Shower | Eventos George Malaga",
+      "description": "Decoracion y organizacion de baby shower en Malaga.",
+      "heroEyebrow": "Celebraciones dulces",
+      "heroTitle": "Baby shower<br><em>inolvidable</em>",
+      "heroText": "Creamos un ambiente cuidado, bonito y cercano para celebrar la llegada del bebe.",
+      "heroImage": ""
+    },
+    "contacto": {
+      "title": "Contacto y Presupuesto Gratis | Eventos George Malaga",
+      "description": "Solicita presupuesto gratuito para tu evento en Malaga.",
+      "heroEyebrow": "Estamos aqui para ti",
+      "heroTitle": "Hablemos de<br>tu <em>evento</em>",
+      "heroText": "Solicita tu presupuesto gratuito. Respuesta personalizada en menos de 24 horas.",
+      "heroImage": ""
+    }
+  }
+}
