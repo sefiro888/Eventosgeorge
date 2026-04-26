@@ -186,6 +186,9 @@
   function addMobileBudgetFixes() {
     document.addEventListener("DOMContentLoaded", function () {
       if (document.getElementById("eg-mobile-budget-fix")) return;
+      if (document.querySelector(".fbox form")) {
+        document.body.classList.add("eg-has-budget-form");
+      }
 
       var style = document.createElement("style");
       style.id = "eg-mobile-budget-fix";
@@ -241,6 +244,7 @@
         ".sf-grid{display:grid!important;grid-template-columns:1fr!important;gap:30px!important}",
         ".sf-tag{max-width:100%!important}",
         ".sf-links a,.sf-contact a{overflow-wrap:anywhere!important}",
+        "body.eg-has-budget-form .wa,body.eg-has-budget-form #eg-chat{display:none!important}",
         ".wa{right:14px!important;bottom:14px!important;width:50px!important;height:50px!important}",
         "#eg-chat{right:14px!important;bottom:84px!important}",
         "#eg-chat-panel{right:-4px!important;width:calc(100vw - 20px)!important;max-width:calc(100vw - 20px)!important}",
