@@ -313,6 +313,6 @@ function doSubmit(e){e.preventDefault();const btn=e.target.querySelector('.fsend
 function toggleNav(){const ul=document.querySelector('.nm');ul.style.display=ul.style.display==='flex'?'':'flex';if(ul.style.display==='flex'){ul.style.cssText='display:flex;flex-direction:column;position:fixed;top:58px;left:0;right:0;background:rgba(6,6,6,.98);padding:20px 28px;gap:4px;border-bottom:1px solid #2E2E2E;z-index:499;'}}
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
 </script>
-  <script src="contenido-loader.js" defer></script>
+  <script src="contenido-loader.js?v=4" defer></script>
 </body>
 </html>
