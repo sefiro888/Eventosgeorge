@@ -302,7 +302,7 @@
       var answers = [
         {
           label: "Que servicios ofreceis?",
-          text: "Ofrecemos maestro de ceremonias, decoracion de eventos, sonido y luces, baby shower, bodas, photocall y organizacion integral."
+          text: "Ofrecemos maestro de ceremonias, speaker deportivo, comentarista de futbol, animacion con microfono, pasacalles tematicos, espectaculos tematicos, decoracion de carrozas, escenarios, bares tematicos, bodas, baby shower, sonido y luces. Excepto los eventos de speaker, el resto se realiza en un radio de 100 km desde Malaga."
         },
         {
           label: "Puedo pedir presupuesto?",
@@ -310,19 +310,23 @@
         },
         {
           label: "Trabajais solo en Malaga?",
-          text: "La base esta en Malaga, pero tambien se atienden eventos en toda Andalucia segun disponibilidad."
+          text: "La base esta en Malaga. Excepto los eventos de speaker, el resto de servicios se realiza en un radio de 100 km desde Malaga."
         },
         {
           label: "Teneis sonido y luces?",
-          text: "Si. Hay equipos de sonido, focos LED, maquina de humo y montaje para eventos. Para confirmar el pack adecuado conviene hablar por WhatsApp."
+          text: "Si. Hay equipos de sonido, focos LED, maquina de humo y montaje. Jorge tambien es speaker deportivo, comentarista de futbol y animador con microfono para eventos."
         },
         {
           label: "Haceis decoracion?",
-          text: "Si. Se pueden preparar arcos florales, mesas, photocalls, telones, letras gigantes y decoracion personalizada segun el evento."
+          text: "Si. Se pueden preparar arcos florales, mesas, photocalls, telones, letras gigantes, carrozas, escenarios y bares tematicos. Este servicio se realiza hasta 100 km desde Malaga."
         },
         {
           label: "Como contacto rapido?",
-          text: "Pulsa el boton de WhatsApp y escribe que tipo de evento tienes, fecha aproximada y ciudad. Jorge te respondera con una propuesta."
+          text: "Pulsa el boton de WhatsApp y escribe que tipo de evento tienes, fecha aproximada y ciudad. Recuerda: excepto speaker, los servicios son hasta 100 km desde Malaga."
+        },
+        {
+          label: "Hasta donde os desplazais?",
+          text: "Para speaker deportivo, comentarista de futbol y animacion con microfono se puede consultar el desplazamiento. Para el resto de servicios, el radio habitual es de 100 km desde Malaga."
         }
       ];
 
