@@ -301,32 +301,32 @@
 
       var answers = [
         {
-          label: "Que servicios ofreceis?",
-          text: "Ofrecemos maestro de ceremonias, speaker deportivo, comentarista de futbol, animacion con microfono, pasacalles tematicos, espectaculos tematicos, decoracion de carrozas, escenarios, bares tematicos, bodas, baby shower, sonido y luces. Excepto los eventos de speaker, el resto se realiza en un radio de 100 km desde Malaga."
+          label: "¿Qué servicios ofrecéis?",
+          text: "Ofrecemos maestro de ceremonias, speaker deportivo, comentarista de fútbol, animación con micrófono, pasacalles temáticos, espectáculos temáticos, decoración de carrozas, escenarios, bares temáticos, bodas, baby shower, sonido y luces. Excepto los eventos de speaker, el resto se realiza en un radio de 100 km desde Málaga."
         },
         {
-          label: "Puedo pedir presupuesto?",
-          text: "Si. Puedes pedir presupuesto sin compromiso. Lo ideal es indicar fecha, lugar, tipo de evento, numero aproximado de invitados y servicios que necesitas."
+          label: "¿Puedo pedir presupuesto?",
+          text: "Sí. Puedes pedir presupuesto sin compromiso. Lo ideal es indicar fecha, lugar, tipo de evento, número aproximado de invitados y servicios que necesitas."
         },
         {
-          label: "Trabajais solo en Malaga?",
-          text: "La base esta en Malaga. Excepto los eventos de speaker, el resto de servicios se realiza en un radio de 100 km desde Malaga."
+          label: "¿Trabajáis solo en Málaga?",
+          text: "La base está en Málaga. Excepto los eventos de speaker, el resto de servicios se realiza en un radio de 100 km desde Málaga."
         },
         {
-          label: "Teneis sonido y luces?",
-          text: "Si. Hay equipos de sonido, focos LED, maquina de humo y montaje. Jorge tambien es speaker deportivo, comentarista de futbol y animador con microfono para eventos."
+          label: "¿Tenéis sonido y luces?",
+          text: "Sí. Hay equipos de sonido, focos LED, máquina de humo y montaje. Jorge también es speaker deportivo, comentarista de fútbol y animador con micrófono para eventos."
         },
         {
-          label: "Haceis decoracion?",
-          text: "Si. Se pueden preparar arcos florales, mesas, photocalls, telones, letras gigantes, carrozas, escenarios y bares tematicos. Este servicio se realiza hasta 100 km desde Malaga."
+          label: "¿Hacéis decoración?",
+          text: "Sí. Se pueden preparar arcos florales, mesas, photocalls, telones, letras gigantes, carrozas, escenarios y bares temáticos. Este servicio se realiza hasta 100 km desde Málaga."
         },
         {
-          label: "Como contacto rapido?",
-          text: "Pulsa el boton de WhatsApp y escribe que tipo de evento tienes, fecha aproximada y ciudad. Recuerda: excepto speaker, los servicios son hasta 100 km desde Malaga."
+          label: "¿Cómo contacto rápido?",
+          text: "Pulsa el botón de WhatsApp y escribe qué tipo de evento tienes, fecha aproximada y ciudad. Recuerda: excepto speaker, los servicios son hasta 100 km desde Málaga."
         },
         {
-          label: "Hasta donde os desplazais?",
-          text: "Para speaker deportivo, comentarista de futbol y animacion con microfono se puede consultar el desplazamiento. Para el resto de servicios, el radio habitual es de 100 km desde Malaga."
+          label: "¿Hasta dónde os desplazáis?",
+          text: "Para speaker deportivo, comentarista de fútbol y animación con micrófono se puede consultar el desplazamiento. Para el resto de servicios, el radio habitual es de 100 km desde Málaga."
         }
       ];
 
@@ -336,7 +336,7 @@
       var close = chat.querySelector(".eg-chat-close");
       var whatsapp = document.getElementById("eg-chat-wa");
       var phone = "34666213503";
-      var message = "Hola Jorge, quiero informacion sobre un evento.";
+      var message = "Hola Jorge, quiero información sobre un evento.";
 
       whatsapp.href = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
 

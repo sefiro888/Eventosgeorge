@@ -4,59 +4,59 @@
     "telefono": "666 21 35 03",
     "telefonoHref": "+34666213503",
     "whatsapp": "34666213503",
-    "whatsappMensaje": "Hola Jorge, quiero informacion sobre mi evento.",
+    "whatsappMensaje": "Hola Jorge, quiero información sobre mi evento.",
     "email": "eventosgeorge73@gmail.com",
     "instagramUrl": "https://www.instagram.com/eventosgeorge73",
     "instagramTexto": "@eventosgeorge73"
   },
   "paginas": {
     "index": {
-      "title": "Eventos George - Maestro de Ceremonias y Decoracion en Malaga",
-      "description": "Jorge Fernandez: maestro de ceremonias, speaker deportivo, decorador y organizador de eventos tematicos en Malaga.",
-      "heroEyebrow": "Malaga y alrededores",
+      "title": "Eventos George - Maestro de Ceremonias y Decoración en Málaga",
+      "description": "Jorge Fernández: maestro de ceremonias, speaker deportivo, decorador y organizador de eventos temáticos en Málaga.",
+      "heroEyebrow": "Málaga y alrededores",
       "heroTitle": "Tu evento,<br><em>unico</em> e<br><strong>inolvidable</strong>",
       "heroSignature": "Jorge Fernandez - Maestro de Ceremonias",
-      "heroText": "Mas de 15 anos creando celebraciones en Malaga y alrededores: bodas, baby showers, eventos deportivos, pasacalles, carrozas, escenarios y bares tematicos. Servicios no speaker disponibles en un radio de 100 km desde Malaga.",
+      "heroText": "Más de 15 años creando celebraciones en Málaga y alrededores: bodas, baby showers, eventos deportivos, pasacalles, carrozas, escenarios y bares temáticos. Servicios no speaker disponibles en un radio de 100 km desde Málaga.",
       "heroImage": ""
     },
     "bodas": {
-      "title": "Bodas y Maestro de Ceremonias | Eventos George Malaga",
-      "description": "Maestro de ceremonias para bodas en Malaga y Andalucia.",
+      "title": "Bodas y Maestro de Ceremonias | Eventos George Málaga",
+      "description": "Maestro de ceremonias para bodas en Málaga y Andalucía.",
       "heroEyebrow": "Ceremonias con alma",
-      "heroTitle": "Bodas con<br><em>emocion</em>",
-      "heroText": "Conduccion elegante, cercana y cuidada para que cada momento tenga ritmo, sentido y emocion. Bodas y servicios integrales disponibles hasta 100 km desde Malaga.",
+      "heroTitle": "Bodas con<br><em>emoción</em>",
+      "heroText": "Conducción elegante, cercana y cuidada para que cada momento tenga ritmo, sentido y emoción. Bodas y servicios integrales disponibles hasta 100 km desde Málaga.",
       "heroImage": ""
     },
     "decoracion": {
-      "title": "Decoracion de Eventos | Eventos George Malaga",
-      "description": "Decoracion para bodas, fiestas, photocalls, carrozas, escenarios y bares tematicos en Malaga.",
+      "title": "Decoración de Eventos | Eventos George Málaga",
+      "description": "Decoración para bodas, fiestas, photocalls, carrozas, escenarios y bares temáticos en Málaga.",
       "heroEyebrow": "Espacios que impresionan",
-      "heroTitle": "Decoracion<br><em>especial</em>",
-      "heroText": "Arcos, flores, telas, photocalls, carrozas, escenarios y bares tematicos pensados para transformar cada espacio. Servicio disponible hasta 100 km desde Malaga.",
+      "heroTitle": "Decoración<br><em>especial</em>",
+      "heroText": "Arcos, flores, telas, photocalls, carrozas, escenarios y bares temáticos pensados para transformar cada espacio. Servicio disponible hasta 100 km desde Málaga.",
       "heroImage": ""
     },
     "sonido": {
-      "title": "Speaker Deportivo, Sonido y Luces | Eventos George Malaga",
-      "description": "Speaker deportivo, comentarista de futbol, animacion con microfono, sonido e iluminacion para eventos en Malaga.",
+      "title": "Speaker Deportivo, Sonido y Luces | Eventos George Málaga",
+      "description": "Speaker deportivo, comentarista de fútbol, animación con micrófono, sonido e iluminación para eventos en Málaga.",
       "heroEyebrow": "Ritmo, voz y energia",
       "heroTitle": "Speaker y<br><em>animacion</em>",
-      "heroText": "Especialidad en speaker deportivo, comentarista de futbol y animacion con microfono. Los eventos de speaker pueden consultarse fuera del radio habitual.",
+      "heroText": "Especialidad en speaker deportivo, comentarista de fútbol y animación con micrófono. Los eventos de speaker pueden consultarse fuera del radio habitual.",
       "heroImage": ""
     },
     "baby-shower": {
-      "title": "Baby Shower | Eventos George Malaga",
-      "description": "Decoracion y organizacion de baby shower en Malaga.",
+      "title": "Baby Shower | Eventos George Málaga",
+      "description": "Decoración y organización de baby shower en Málaga.",
       "heroEyebrow": "Celebraciones dulces",
       "heroTitle": "Baby shower<br><em>inolvidable</em>",
-      "heroText": "Creamos un ambiente cuidado, bonito y cercano para celebrar la llegada del bebe. Servicio disponible hasta 100 km desde Malaga.",
+      "heroText": "Creamos un ambiente cuidado, bonito y cercano para celebrar la llegada del bebé. Servicio disponible hasta 100 km desde Málaga.",
       "heroImage": ""
     },
     "contacto": {
-      "title": "Contacto y Presupuesto Gratis | Eventos George Malaga",
-      "description": "Solicita presupuesto gratuito para tu evento en Malaga.",
+      "title": "Contacto y Presupuesto Gratis | Eventos George Málaga",
+      "description": "Solicita presupuesto gratuito para tu evento en Málaga.",
       "heroEyebrow": "Estamos aqui para ti",
       "heroTitle": "Hablemos de<br>tu <em>evento</em>",
-      "heroText": "Solicita tu presupuesto gratuito. Salvo eventos de speaker, los servicios se realizan en un radio de 100 km desde Malaga.",
+      "heroText": "Solicita tu presupuesto gratuito. Salvo eventos de speaker, los servicios se realizan en un radio de 100 km desde Málaga.",
       "heroImage": ""
     }
   },
@@ -85,7 +85,7 @@
     ],
     "bodas": [
       {
-        "nombre": "Decoracion para bodas",
+        "nombre": "Decoración para bodas",
         "src": ""
       },
       {
@@ -115,15 +115,15 @@
         "src": ""
       },
       {
-        "nombre": "Galeria decoracion 1",
+        "nombre": "Galería decoración 1",
         "src": ""
       },
       {
-        "nombre": "Galeria decoracion 2",
+        "nombre": "Galería decoración 2",
         "src": ""
       },
       {
-        "nombre": "Galeria decoracion 3",
+        "nombre": "Galería decoración 3",
         "src": ""
       }
     ],
@@ -147,11 +147,11 @@
         "src": ""
       },
       {
-        "nombre": "Decoracion baby shower 1",
+        "nombre": "Decoración baby shower 1",
         "src": ""
       },
       {
-        "nombre": "Decoracion baby shower 2",
+        "nombre": "Decoración baby shower 2",
         "src": ""
       }
     ],
