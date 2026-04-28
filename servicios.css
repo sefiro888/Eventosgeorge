@@ -24,6 +24,9 @@ h1 em{font-style:italic;color:var(--gl)}
 .visual.photo-visual{background:#111}
 .visual.photo-visual::before{display:none}
 .visual.photo-visual img{width:100%;height:100%;min-height:380px;object-fit:cover;object-position:center top;display:block}
+.photo-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}
+.photo-card{background:var(--d2);border:1px solid var(--db);border-radius:6px;overflow:hidden;min-height:220px}
+.photo-card img{width:100%;height:100%;min-height:220px;object-fit:cover;display:block}
 .body{padding:76px 72px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
 h2{font-family:var(--fd);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.12;color:var(--white);margin-bottom:16px}
@@ -55,4 +58,4 @@ h2 em{font-style:italic;color:var(--gl)}
 .sf-h{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
 .sf-links{list-style:none;display:grid;gap:8px}.sf-links a{font-size:.82rem;color:var(--t2)}.sf-links a:hover{color:var(--gl)}
 .wa{position:fixed;right:22px;bottom:22px;width:54px;height:54px;border-radius:50%;background:#25D366;display:grid;place-items:center;font-size:1.4rem;z-index:60;box-shadow:0 8px 24px rgba(37,211,102,.4)}
-@media(max-width:1180px){#nav{padding:0 18px}.nm{display:none}.nham{display:flex}.ncta{display:none}.hero{grid-template-columns:1fr;padding:104px 24px 48px}.body{padding:52px 24px}.grid{grid-template-columns:1fr}.links,.trust-grid,.zones-grid{grid-template-columns:1fr}.site-footer{padding:36px 24px}.sf-grid{grid-template-columns:1fr}.visual{min-height:250px}.visual.photo-visual img{min-height:250px}h1{font-size:clamp(2.4rem,13vw,4rem)}}
+@media(max-width:1180px){#nav{padding:0 18px}.nm{display:none}.nham{display:flex}.ncta{display:none}.hero{grid-template-columns:1fr;padding:104px 24px 48px}.body{padding:52px 24px}.grid{grid-template-columns:1fr}.links,.trust-grid,.zones-grid,.photo-gallery{grid-template-columns:1fr}.site-footer{padding:36px 24px}.sf-grid{grid-template-columns:1fr}.visual{min-height:250px}.visual.photo-visual img{min-height:250px}.photo-card,.photo-card img{min-height:230px}h1{font-size:clamp(2.4rem,13vw,4rem)}}
