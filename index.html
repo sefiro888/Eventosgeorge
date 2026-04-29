@@ -53,6 +53,7 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
 
 /* CARDS GRID */
 .cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:var(--db);border-radius:4px;overflow:hidden;margin-bottom:64px}
 .card{background:var(--d2);border:1px solid var(--db);border-radius:4px;overflow:hidden;transition:border-color .35s,transform .35s,box-shadow .35s;display:flex;flex-direction:column}
 .card:hover{border-color:rgba(201,168,76,.4);transform:translateY(-6px);box-shadow:0 22px 52px rgba(0,0,0,.55),0 0 0 1px rgba(201,168,76,.1)}
 .card-img{overflow:hidden;background:var(--d1)}
@@ -148,6 +149,7 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
   #nav{padding:0 28px}.nm{display:none}.nham{display:flex}
   .page-hero-content{padding:0 32px 48px}
   .page-body{padding:60px 32px}
+  .services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .info-grid{grid-template-columns:1fr;gap:36px}
   .contact-section{grid-template-columns:1fr;gap:36px;padding:40px}
   .sf-grid{grid-template-columns:1fr 1fr;gap:40px}
@@ -162,6 +164,7 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
   .real-gallery-grid{grid-template-columns:1fr!important}
   .page-hero-content{padding:0 20px 40px}
   .page-body{padding:48px 20px}
+  .services-grid{grid-template-columns:1fr}
   .cards-grid{grid-template-columns:1fr}
   .contact-section{padding:28px 20px}
   .fbox{padding:28px 18px}
@@ -177,7 +180,7 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
 <a href="https://wa.me/34666213503?text=Hola%20Jorge%2C%20quiero%20información%20sobre%20mi%20evento." class="wa" target="_blank" rel="noopener">💬</a>
 <nav id="nav">
   <a href="index.html" class="nl"><span class="nl-txt">Eventos George</span></a>
-  <ul class="nm"><li><a href="index.html" class="active">Inicio</a></li><li><a href="bodas.html">Bodas</a></li><li><a href="baby-shower.html">Baby Shower</a></li><li><a href="comuniones.html">Comuniones</a></li><li><a href="revelacion-sexo.html">Revelaci?n</a></li><li><a href="decoracion.html">Decoración</a></li><li><a href="sonido.html">Sonido</a></li><li><a href="speaker-deportivo.html">Speaker</a></li><li><a href="pasacalles-tematicos.html">Pasacalles</a></li><li><a href="carrozas-escenarios.html">Carrozas</a></li><li><a href="espectaculos-tematicos.html">Espectáculos</a></li><li><a href="bares-tematicos.html">Bares</a></li><li><a href="contacto.html">Contacto</a></li></ul>
+  <ul class="nm"><li><a href="index.html" class="active">Inicio</a></li><li><a href="bodas.html">Bodas</a></li><li><a href="baby-shower.html">Baby Shower</a></li><li><a href="comuniones.html">Comuniones</a></li><li><a href="revelacion-sexo.html">Revelación</a></li><li><a href="decoracion.html">Decoración</a></li><li><a href="sonido.html">Sonido</a></li><li><a href="speaker-deportivo.html">Speaker</a></li><li><a href="pasacalles-tematicos.html">Pasacalles</a></li><li><a href="carrozas-escenarios.html">Carrozas</a></li><li><a href="espectaculos-tematicos.html">Espectáculos</a></li><li><a href="bares-tematicos.html">Bares</a></li><li><a href="contacto.html">Contacto</a></li></ul>
   <a href="contacto.html" class="ncta">Presupuesto</a>
   <button class="nham" onclick="toggleNav()"><span></span><span></span><span></span></button>
 </nav>
@@ -212,7 +215,7 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
 <div class="page-body">
   <div class="ey rv" id="servicios">Nuestros servicios</div>
   <h2 class="sec-title rv">Todo lo que necesitas<br>para tu <em>evento perfecto</em></h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2px;background:var(--db);border-radius:4px;overflow:hidden;margin-bottom:64px">
+  <div class="services-grid">
     <a href="bodas.html" style="background:var(--d2);padding:40px 36px;display:block;position:relative;overflow:hidden;transition:background .4s;text-decoration:none;border-bottom:2px solid transparent" class="rv" onmouseover="this.style.background='var(--d3)';this.querySelector('.svc-arrow').style.opacity='1'" onmouseout="this.style.background='var(--d2)';this.querySelector('.svc-arrow').style.opacity='0'">
       <div style="font-family:var(--fd);font-size:4rem;font-weight:300;color:rgba(201,168,76,.06);line-height:1;margin-bottom:18px">01</div>
       <div style="font-size:1.9rem;margin-bottom:16px">🎤</div>
