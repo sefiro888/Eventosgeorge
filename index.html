@@ -62,6 +62,21 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
 .card-cta{display:block;margin:14px 20px 20px;text-align:center;border:1px solid rgba(201,168,76,.22);color:var(--gold);font-size:.67rem;letter-spacing:.15em;text-transform:uppercase;padding:12px;border-radius:2px;transition:all .3s;font-weight:600}
 .card-cta:hover{background:var(--gold);color:var(--black);border-color:var(--gold)}
 
+/* HOME CAROUSEL */
+.home-carousel{position:relative;margin-bottom:32px;overflow:hidden}
+.home-carousel-viewport{overflow:hidden;width:100%}
+.home-carousel-track{display:flex;transition:transform .55s cubic-bezier(.23,1,.32,1);will-change:transform}
+.home-carousel-slide{flex:0 0 20%;padding:0 2px;box-sizing:border-box}
+.home-carousel-photo{height:280px;overflow:hidden;background:var(--d2);cursor:zoom-in}
+.home-carousel-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.home-carousel-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:42px;height:42px;border-radius:50%;background:rgba(6,6,6,.74);border:1px solid rgba(201,168,76,.45);color:var(--gl);display:flex;align-items:center;justify-content:center;font-size:1.35rem;line-height:1;transition:all .25s}
+.home-carousel-btn:hover{background:var(--gold);color:var(--black)}
+.home-carousel-prev{left:12px}
+.home-carousel-next{right:12px}
+.home-carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:18px;flex-wrap:wrap}
+.home-carousel-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.24);border:0;transition:all .25s}
+.home-carousel-dot.active{background:var(--gold);transform:scale(1.22)}
+
 /* INFO BLOCKS */
 .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:80px}
 .info-img{border-radius:4px;overflow:hidden;border:1px solid var(--db)}
@@ -150,6 +165,7 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
   .page-hero-content{padding:0 32px 48px}
   .page-body{padding:60px 32px}
   .services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .home-carousel-slide{flex-basis:33.3333%}
   .info-grid{grid-template-columns:1fr;gap:36px}
   .contact-section{grid-template-columns:1fr;gap:36px;padding:40px}
   .sf-grid{grid-template-columns:1fr 1fr;gap:40px}
@@ -162,6 +178,11 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
   .home-hero-actions{display:grid!important;grid-template-columns:1fr;gap:12px!important}
   .home-hero-actions a{justify-content:center;text-align:center;width:100%;padding-left:18px!important;padding-right:18px!important}
   .real-gallery-grid{grid-template-columns:1fr!important}
+  .home-carousel-slide{flex-basis:33.3333%;padding:0 1.5px}
+  .home-carousel-photo{height:210px}
+  .home-carousel-btn{width:36px;height:36px;font-size:1.1rem}
+  .home-carousel-prev{left:6px}
+  .home-carousel-next{right:6px}
   .page-hero-content{padding:0 20px 40px}
   .page-body{padding:48px 20px}
   .services-grid{grid-template-columns:1fr}
@@ -301,13 +322,46 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
     <div class="ey" style="justify-content:center">Galería de trabajos</div>
     <h2 class="sec-title">Algunos de nuestros<br><em>mejores momentos</em></h2>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-bottom:32px" class="real-gallery-grid">
-    <div style="overflow:hidden;height:280px;cursor:zoom-in;background:var(--d2)" class="rv" onclick="openLB(this)"><img src="imagenes/Eventos-george/GALERIA DE TODO/WhatsApp Image 2026-04-13 at 12.00.21 (3).jpeg" alt="Trabajo realizado por Eventos George en M&aacute;laga" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-    <div style="overflow:hidden;height:280px;cursor:zoom-in;background:var(--d2)" class="rv" onclick="openLB(this)"><img src="imagenes/Eventos-george/GALERIA DE TODO/WhatsApp Image 2026-04-13 at 12.00.21 (13).jpeg" alt="Decoraci&oacute;n y ambientaci&oacute;n real de evento" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-    <div style="overflow:hidden;height:280px;cursor:zoom-in;background:var(--d2)" class="rv" onclick="openLB(this)"><img src="imagenes/Eventos-george/GALERIA DE TODO/WhatsApp Image 2026-04-13 at 12.00.21 (25).jpeg" alt="Montaje tem&aacute;tico para celebraci&oacute;n" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-    <div style="overflow:hidden;height:280px;cursor:zoom-in;background:var(--d2)" class="rv" onclick="openLB(this)"><img src="imagenes/Eventos-george/foto de portada de decoracion de eventos.jpeg" alt="Decoraci&oacute;n de evento con montaje visual" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-    <div style="overflow:hidden;height:280px;cursor:zoom-in;background:var(--d2)" class="rv" onclick="openLB(this)"><img src="imagenes/Eventos-george/Foto para portada maestro de ceremonia.jpeg" alt="Jorge Fern&aacute;ndez como maestro de ceremonias" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-    <div style="overflow:hidden;height:280px;cursor:zoom-in;background:var(--d2)" class="rv" onclick="openLB(this)"><img src="imagenes/Eventos-george/Fotos de portada Sonido e Iluminacion.jpeg" alt="Sonido e iluminaci&oacute;n para eventos en M&aacute;laga" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+  <div class="home-carousel rv" data-home-carousel>
+    <button class="home-carousel-btn home-carousel-prev" type="button" aria-label="Foto anterior">‹</button>
+    <div class="home-carousel-viewport">
+      <div class="home-carousel-track">
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal1.jpeg" alt="Trabajo realizado por Eventos George" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal2.jpeg" alt="Decoraci&oacute;n de evento realizada por Eventos George" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal3.jpeg" alt="Montaje para celebraci&oacute;n en M&aacute;laga" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal4.jpeg" alt="Decoraci&oacute;n y ambientaci&oacute;n para evento" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal5.jpeg" alt="Momento especial de celebraci&oacute;n" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal6.jpeg" alt="Escenario decorado para evento" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal7.jpeg" alt="Celebraci&oacute;n personalizada en M&aacute;laga" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal8.jpeg" alt="Montaje profesional para evento" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal9.jpeg" alt="Trabajo realizado por Eventos George" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal10.jpeg" alt="Decoraci&oacute;n de evento realizada por Eventos George" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal11.jpeg" alt="Montaje para celebraci&oacute;n en M&aacute;laga" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal12.jpeg" alt="Decoraci&oacute;n y ambientaci&oacute;n para evento" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal13.jpeg" alt="Momento especial de celebraci&oacute;n" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal14.jpeg" alt="Escenario decorado para evento" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal15.jpeg" alt="Celebraci&oacute;n personalizada en M&aacute;laga" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal16.jpeg" alt="Montaje profesional para evento" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal17.jpeg" alt="Trabajo realizado por Eventos George" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal18.jpeg" alt="Decoraci&oacute;n de evento realizada por Eventos George" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal19.jpeg" alt="Montaje para celebraci&oacute;n en M&aacute;laga" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal20.jpeg" alt="Decoraci&oacute;n y ambientaci&oacute;n para evento" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal21.jpeg" alt="Momento especial de celebraci&oacute;n" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal22.jpeg" alt="Escenario decorado para evento" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal23.jpeg" alt="Celebraci&oacute;n personalizada en M&aacute;laga" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal24.jpeg" alt="Montaje profesional para evento" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal25.jpeg" alt="Trabajo realizado por Eventos George" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal26.jpeg" alt="Decoraci&oacute;n de evento realizada por Eventos George" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal27.jpeg" alt="Montaje para celebraci&oacute;n en M&aacute;laga" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal28.jpeg" alt="Decoraci&oacute;n y ambientaci&oacute;n para evento" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal29.jpeg" alt="Momento especial de celebraci&oacute;n" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal30.jpeg" alt="Escenario decorado para evento" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal31.jpeg" alt="Celebraci&oacute;n personalizada en M&aacute;laga" loading="lazy"></div></div>
+        <div class="home-carousel-slide"><div class="home-carousel-photo" onclick="openLB(this)"><img src="imagenes/Eventos-george/galeria-principal/galeriaprincipal32.jpeg" alt="Montaje profesional para evento" loading="lazy"></div></div>
+      </div>
+    </div>
+    <button class="home-carousel-btn home-carousel-next" type="button" aria-label="Foto siguiente">›</button>
+    <div class="home-carousel-dots" aria-label="Paginaci&oacute;n de galer&iacute;a"></div>
   </div>
   <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:80px">
     <a href="decoracion.html" class="btn-gold" style="justify-content:center">Ver toda la decoraci&oacute;n</a>
@@ -420,6 +474,8 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB()});
 function doSubmit(e){e.preventDefault();const btn=e.target.querySelector('.fsend');btn.textContent='Enviando...';btn.disabled=true;const n=e.target.querySelector('input[type=text]').value,t=e.target.querySelector('input[type=tel]').value;setTimeout(()=>{document.getElementById('finner').style.display='none';document.getElementById('fok').style.display='block';window.open('https://wa.me/34666213503?text='+encodeURIComponent('Hola Jorge! Soy '+n+'. Solicitud desde la web. Tel: '+t+'.'),'_blank')},1100)}
 function toggleNav(){const ul=document.querySelector('.nm');ul.style.display=ul.style.display==='flex'?'':'flex';if(ul.style.display==='flex'){ul.style.cssText='display:flex;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:rgba(6,6,6,.98);padding:20px 28px;gap:4px;border-bottom:1px solid #2E2E2E;z-index:499;align-items:stretch;'}}
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+function initHomeCarousel(){const carousel=document.querySelector('[data-home-carousel]');if(!carousel)return;const viewport=carousel.querySelector('.home-carousel-viewport'),track=carousel.querySelector('.home-carousel-track'),slides=[...carousel.querySelectorAll('.home-carousel-slide')],prev=carousel.querySelector('.home-carousel-prev'),next=carousel.querySelector('.home-carousel-next'),dotsWrap=carousel.querySelector('.home-carousel-dots');let page=0;const visible=()=>window.matchMedia('(max-width:1180px)').matches?3:5;const pages=()=>Math.max(1,Math.ceil(slides.length/visible()));const renderDots=()=>{dotsWrap.innerHTML='';for(let i=0;i<pages();i++){const dot=document.createElement('button');dot.type='button';dot.className='home-carousel-dot';dot.setAttribute('aria-label','Ver grupo '+(i+1)+' de la galer&iacute;a');dot.addEventListener('click',()=>go(i));dotsWrap.appendChild(dot)}};const go=(target)=>{const v=visible();page=Math.max(0,Math.min(target,pages()-1));const maxOffset=Math.max(0,slides.length-v),offset=Math.min(page*v,maxOffset),slideWidth=viewport.clientWidth/v;track.style.transform='translateX(-'+(offset*slideWidth)+'px)';[...dotsWrap.children].forEach((dot,i)=>dot.classList.toggle('active',i===page))};prev.addEventListener('click',()=>go(page-1));next.addEventListener('click',()=>go(page+1));window.addEventListener('resize',()=>{renderDots();go(page)},{passive:true});renderDots();go(0)}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initHomeCarousel)}else{initHomeCarousel()}
 </script>
   <script src="contenido-loader.js?v=5" defer></script>
 </body>
