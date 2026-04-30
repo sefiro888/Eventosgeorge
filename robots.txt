@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sefiro888.github.io/Eventosgeorge/sitemap.xml
+Sitemap: https://eventosgeorge.es/sitemap.xml
