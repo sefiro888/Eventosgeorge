@@ -67,22 +67,16 @@
     });
 
     document.querySelectorAll('a[href*="wa.me"], .wa').forEach(function (link) {
-      if (whatsapp) {
+      if (whatsapp && link.href.indexOf("?text=") === -1) {
         link.href = "https://wa.me/" + whatsapp + (whatsappMessage ? "?text=" + whatsappMessage : "");
       }
     });
   }
 
   function applyPage(page) {
-    if (page.title) document.title = page.title;
-    setMeta("description", page.description);
-
     if (pageName === "index") {
       applyIndexHero(page);
     } else {
-      setText(".page-hero-ey", page.heroEyebrow);
-      setHtml(".page-hero-h1", page.heroTitle);
-      setText(".page-hero-sub", page.heroText);
       setHeroImage(".page-hero-bg", page.heroImage);
     }
   }
@@ -94,15 +88,6 @@
     var eyebrow = hero.querySelector('div[style*="text-transform:uppercase"]');
     var heading = hero.querySelector("h1");
     var paragraphs = hero.querySelectorAll("p");
-
-    if (eyebrow && page.heroEyebrow) {
-      var line = eyebrow.querySelector("span");
-      eyebrow.textContent = page.heroEyebrow;
-      if (line) eyebrow.prepend(line);
-    }
-    if (heading && page.heroTitle) heading.innerHTML = page.heroTitle;
-    if (paragraphs[0] && page.heroSignature) paragraphs[0].textContent = page.heroSignature;
-    if (paragraphs[1] && page.heroText) paragraphs[1].textContent = page.heroText;
 
     if (page.heroImage) {
       var background = hero.querySelector('div[style*="background-image"]');
