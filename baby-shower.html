@@ -175,6 +175,7 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
   .sf-bot{flex-direction:column;text-align:center}
 }
 </style>
+<link rel="stylesheet" href="cookies.css">
 </head>
 <body>
 
@@ -219,10 +220,10 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
     <p class="sec-lead">Mira un ejemplo real de decoración y montaje para baby shower preparado para crear un ambiente especial, bonito y familiar.</p>
     <div class="cards-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
       <div class="card" style="aspect-ratio:16/9;min-height:0">
-        <iframe src="https://www.youtube-nocookie.com/embed/wQo738khRl0" title="Baby Shower preparado por Eventos George" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%;height:100%;border:0;display:block"></iframe>
+        <div class="cookie-embed" data-cookie-src="https://www.youtube-nocookie.com/embed/wQo738khRl0" data-cookie-title="Baby Shower preparado por Eventos George"></div>
       </div>
       <div class="card" style="aspect-ratio:16/9;min-height:0">
-        <iframe src="https://www.youtube-nocookie.com/embed/WLA6Thpy0eQ" title="Baby Shower Eventos George" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%;height:100%;border:0;display:block"></iframe>
+        <div class="cookie-embed" data-cookie-src="https://www.youtube-nocookie.com/embed/WLA6Thpy0eQ" data-cookie-title="Baby Shower Eventos George"></div>
       </div>
     </div>
   </section>
@@ -316,6 +317,8 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
       <ul class="sf-links">
         <li><a href="politica-privacidad.html">Pol&iacute;tica de privacidad</a></li>
         <li><a href="aviso-legal.html">Aviso legal</a></li>
+        <li><a href="politica-cookies.html">Pol&iacute;tica de cookies</a></li>
+        <li><button class="eg-cookie-link" type="button" data-cookie-preferences>Configurar cookies</button></li>
       </ul>
     </div>
   </div>
@@ -352,6 +355,7 @@ function toggleNav(){const ul=document.querySelector('.nm');ul.style.display=ul.
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
 </script>
   <script src="contenido-loader.js?v=5" defer></script>
+<script src="cookies.js" defer></script>
 </body>
 </html>
 
