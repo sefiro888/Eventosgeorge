@@ -41,6 +41,7 @@
   }
 
   function init() {
+    keepWhatsAppVisible();
     buildBanner();
     buildPanel();
     bindFooterLinks();
@@ -52,6 +53,15 @@
       renderExternalPlaceholders();
       showBanner();
     }
+  }
+
+  function keepWhatsAppVisible() {
+    if (document.getElementById("eg-cookie-whatsapp-visibility")) return;
+
+    var style = document.createElement("style");
+    style.id = "eg-cookie-whatsapp-visibility";
+    style.textContent = 'body.eg-has-budget-form .wa[href*="wa.me"], .wa[href*="wa.me"]{display:flex!important}';
+    document.head.appendChild(style);
   }
 
   function buildBanner() {
@@ -168,6 +178,7 @@
 
   function renderExternalPlaceholders() {
     document.querySelectorAll("[data-cookie-src]").forEach(function (embed) {
+      markVideoEmbed(embed);
       if (embed.querySelector(".cookie-embed-placeholder")) return;
       embed.innerHTML =
         '<div class="cookie-embed-placeholder">' +
@@ -183,16 +194,24 @@
 
   function loadExternalContent() {
     document.querySelectorAll("[data-cookie-src]").forEach(function (embed) {
+      markVideoEmbed(embed);
       var iframe = document.createElement("iframe");
       iframe.src = embed.getAttribute("data-cookie-src");
       iframe.title = embed.getAttribute("data-cookie-title") || "Contenido externo";
       iframe.loading = "lazy";
       iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
       iframe.allowFullscreen = true;
-      iframe.style.cssText = "width:100%;height:100%;border:0;display:block";
+      iframe.style.cssText = "width:100%;height:100%;max-width:100%;max-height:100%;border:0;display:block;object-fit:contain;object-position:center center;background:#111;border-radius:inherit";
       embed.innerHTML = "";
       embed.appendChild(iframe);
     });
+  }
+
+  function markVideoEmbed(embed) {
+    embed.classList.add("video-thumb");
+
+    var parent = embed.parentElement;
+    if (parent) parent.classList.add("video-card");
   }
 
   window.EventosGeorgeCookies = {
