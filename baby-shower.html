@@ -17,6 +17,38 @@
 <meta property="og:url" content="https://eventosgeorge.es/baby-shower.html">
 <meta property="og:image" content="https://eventosgeorge.es/imagenes/Eventos-george/fotofinalportada.jpeg">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Decoración para baby shower en Málaga",
+      "serviceType": "Decoración de baby shower",
+      "url": "https://eventosgeorge.es/baby-shower.html",
+      "description": "Decoración para baby shower en Málaga: mesa temática, globos, fondos para fotos y montaje personalizado.",
+      "provider": { "@id": "https://eventosgeorge.es/#localbusiness", "@type": "LocalBusiness", "name": "Eventos George", "url": "https://eventosgeorge.es/", "telephone": "+34666213503" },
+      "areaServed": [ { "@type": "City", "name": "Málaga" }, { "@type": "AdministrativeArea", "name": "Provincia de Málaga" } ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://eventosgeorge.es/" },
+        { "@type": "ListItem", "position": 2, "name": "Baby Shower", "item": "https://eventosgeorge.es/baby-shower.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿En qué zonas de Málaga decoráis baby showers?", "acceptedAnswer": { "@type": "Answer", "text": "Decoramos baby showers en Málaga capital y en localidades de la provincia dentro de un radio aproximado de 100 km: Marbella, Torremolinos, Benalmádena, Fuengirola, Mijas, Vélez-Málaga, Rincón de la Victoria, Antequera, Estepona y alrededores." } },
+        { "@type": "Question", "name": "¿Qué incluye la decoración de un baby shower?", "acceptedAnswer": { "@type": "Answer", "text": "Mesa temática, globos, photocall o fondo para fotos, peluches gigantes, mesa de dulces y detalles personalizados, con montaje y desmontaje incluidos." } },
+        { "@type": "Question", "name": "¿Podéis adaptar la decoración al género o al tema?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Personalizamos colores, temática y detalles según si es niño, niña o un estilo concreto que tengáis en mente." } },
+        { "@type": "Question", "name": "¿Cómo pido presupuesto?", "acceptedAnswer": { "@type": "Answer", "text": "Escríbenos por WhatsApp o desde el formulario indicando fecha, localidad y la idea que tenéis para el baby shower." } }
+      ]
+    }
+  ]
+}
+</script>
 
 <style>
 :root{--gold:#C9A84C;--gl:#E8C97A;--gd:#7A5C10;--black:#060606;--d1:#0C0C0C;--d2:#141414;--d3:#1C1C1C;--db:#2E2E2E;--white:#fff;--off:#F8F3EC;--t1:#C4C4C4;--t2:#7A7A7A;--t3:#444;--gg:linear-gradient(135deg,#C9A84C,#E8C97A 45%,#D4A843 75%,#C9A84C);--gs:0 4px 32px rgba(201,168,76,.25);--fd:'Cormorant Garamond',Georgia,serif;--fs:'Great Vibes',cursive;--fb:'Jost',sans-serif}
@@ -174,6 +206,20 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
   .site-footer{padding:40px 20px 24px}
   .sf-bot{flex-direction:column;text-align:center}
 }
+.breadcrumb{font-size:.72rem;color:var(--t2);letter-spacing:.04em;margin-bottom:32px}
+.breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.breadcrumb li{display:flex;align-items:center;gap:8px}
+.breadcrumb li:not(:last-child)::after{content:"›";color:var(--gold);opacity:.6}
+.breadcrumb a{color:var(--t2);transition:color .25s}.breadcrumb a:hover{color:var(--gl)}
+.breadcrumb [aria-current]{color:var(--gl)}
+.faq{display:grid;gap:12px;margin-top:28px;max-width:860px}
+.faq details{background:var(--d2);border:1px solid var(--db);border-radius:6px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:18px 22px;font-family:var(--fd);font-size:1.15rem;color:var(--white);font-weight:500;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-size:1.4rem;line-height:1;flex:0 0 auto;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details[open] summary{border-bottom:1px solid var(--db)}
+.faq-a{padding:16px 22px 22px;font-size:.9rem;color:var(--t1);font-weight:300;line-height:1.75}
 </style>
 <link rel="stylesheet" href="cookies.css">
 </head>
@@ -197,6 +243,7 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
   </div>
 </section>
 <div class="page-body">
+  <nav class="breadcrumb" aria-label="Ruta de navegación"><ol><li><a href="index.html">Inicio</a></li><li><span aria-current="page">Baby Shower</span></li></ol></nav>
   <div class="info-grid rv">
     <div class="info-img"><img src="imagenes/Eventos-george/foto para portada Baby Shower.jpeg" alt="Decoraci&oacute;n de baby shower con mesa tem&aacute;tica" loading="lazy"></div>
     <div class="info-content">
@@ -245,6 +292,16 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
     <a href="contacto.html" class="btn-gold" style="margin-top:24px">Pedir propuesta personalizada</a>
   </div>
   
+<section class="rv" style="margin-top:64px" id="faq">
+  <div class="ey">Preguntas frecuentes</div>
+  <h2 class="sec-title">Dudas sobre <em>baby shower</em></h2>
+  <div class="faq">
+    <details><summary>¿En qué zonas de Málaga decoráis baby showers?</summary><div class="faq-a">Decoramos baby showers en Málaga capital y en localidades de la provincia dentro de un radio aproximado de 100 km: Marbella, Torremolinos, Benalmádena, Fuengirola, Mijas, Vélez-Málaga, Rincón de la Victoria, Antequera, Estepona y alrededores.</div></details>
+    <details><summary>¿Qué incluye la decoración de un baby shower?</summary><div class="faq-a">Mesa temática, globos, photocall o fondo para fotos, peluches gigantes, mesa de dulces y detalles personalizados, con montaje y desmontaje incluidos.</div></details>
+    <details><summary>¿Podéis adaptar la decoración al género o al tema?</summary><div class="faq-a">Sí. Personalizamos colores, temática y detalles según si es niño, niña o un estilo concreto que tengáis en mente.</div></details>
+    <details><summary>¿Cómo pido presupuesto?</summary><div class="faq-a">Escríbenos por WhatsApp o desde el formulario indicando fecha, localidad y la idea que tenéis para el baby shower.</div></details>
+  </div>
+</section>
 <div class="contact-section rv" id="contacto">
   <div>
     <h2 class="contact-info-title">Solicitar <em style="font-style:italic;color:var(--gl)">presupuesto</em></h2>
