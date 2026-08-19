@@ -253,14 +253,14 @@
       var style = document.createElement("style");
       style.textContent = [
         "#eg-chat{position:fixed;right:18px;bottom:154px;z-index:9998;font-family:Arial,sans-serif;color:#f8f3ec}",
-        "#eg-chat-toggle{position:relative;width:56px;height:56px;border-radius:50%;background:radial-gradient(circle at 34% 28%,#F5DEA0 0,#D4AE58 42%,#9A7125 78%,#5E4314 100%);color:#211706;border:1px solid rgba(255,241,188,.9);font-family:Georgia,'Times New Roman',serif;font-size:31px;font-weight:400;line-height:1;display:grid;place-items:center;box-shadow:0 0 0 1px rgba(89,60,14,.9),0 0 0 5px rgba(201,168,76,.13),0 10px 30px rgba(0,0,0,.55),0 0 22px rgba(201,168,76,.3);transition:transform .25s,box-shadow .25s;animation:egHelpPulse 3.8s ease-in-out infinite}",
-        "#eg-chat-toggle::before{content:'';position:absolute;inset:-5px;border:1px solid rgba(232,201,122,.48);border-radius:50%;pointer-events:none;animation:egHelpHalo 3.8s ease-in-out infinite}",
-        "#eg-chat-toggle::after{content:'✦';position:absolute;top:-7px;right:-3px;color:#FFF0B5;font-family:Georgia,serif;font-size:12px;text-shadow:0 0 8px rgba(255,226,135,.95);animation:egHelpSpark 2.8s ease-in-out infinite}",
-        "#eg-chat-toggle:hover{transform:scale(1.08);box-shadow:0 0 0 1px rgba(89,60,14,.9),0 0 0 7px rgba(201,168,76,.2),0 12px 34px rgba(0,0,0,.6),0 0 28px rgba(201,168,76,.5)}",
+        "#eg-chat-toggle{position:relative;width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 34% 28%,#F1D98F 0,#C9A84C 44%,#8A641D 80%,#5E4314 100%);color:#211706;border:1px solid rgba(255,241,188,.78);font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;line-height:1;display:grid;place-items:center;box-shadow:0 0 0 1px rgba(89,60,14,.85),0 0 0 3px rgba(201,168,76,.1),0 7px 20px rgba(0,0,0,.48),0 0 14px rgba(201,168,76,.2);transition:transform .25s,box-shadow .25s;animation:egHelpPulse 4.8s ease-in-out infinite}",
+        "#eg-chat-toggle::before{content:'';position:absolute;inset:-3px;border:1px solid rgba(232,201,122,.34);border-radius:50%;pointer-events:none;animation:egHelpHalo 4.8s ease-in-out infinite}",
+        "#eg-chat-toggle::after{content:'✦';position:absolute;top:-5px;right:-2px;color:#FFF0B5;font-family:Georgia,serif;font-size:9px;text-shadow:0 0 6px rgba(255,226,135,.75);animation:egHelpSpark 3.6s ease-in-out infinite}",
+        "#eg-chat-toggle:hover{transform:scale(1.06);box-shadow:0 0 0 1px rgba(89,60,14,.9),0 0 0 5px rgba(201,168,76,.16),0 9px 24px rgba(0,0,0,.55),0 0 20px rgba(201,168,76,.34)}",
         "#eg-chat-toggle span{display:block;transform:translateY(-1px)}",
-        "@keyframes egHelpPulse{0%,100%{box-shadow:0 0 0 1px rgba(89,60,14,.9),0 0 0 5px rgba(201,168,76,.13),0 10px 30px rgba(0,0,0,.55),0 0 22px rgba(201,168,76,.3)}50%{box-shadow:0 0 0 1px rgba(89,60,14,.9),0 0 0 8px rgba(201,168,76,.22),0 12px 34px rgba(0,0,0,.6),0 0 30px rgba(201,168,76,.48)}}",
-        "@keyframes egHelpHalo{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}",
-        "@keyframes egHelpSpark{0%,100%{opacity:.35;transform:scale(.8) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(18deg)}}",
+        "@keyframes egHelpPulse{0%,100%{box-shadow:0 0 0 1px rgba(89,60,14,.85),0 0 0 3px rgba(201,168,76,.1),0 7px 20px rgba(0,0,0,.48),0 0 14px rgba(201,168,76,.2)}50%{box-shadow:0 0 0 1px rgba(89,60,14,.85),0 0 0 5px rgba(201,168,76,.15),0 8px 23px rgba(0,0,0,.52),0 0 19px rgba(201,168,76,.3)}}",
+        "@keyframes egHelpHalo{0%,100%{opacity:.38;transform:scale(1)}50%{opacity:.7;transform:scale(1.03)}}",
+        "@keyframes egHelpSpark{0%,100%{opacity:.25;transform:scale(.8) rotate(0)}50%{opacity:.7;transform:scale(1.08) rotate(12deg)}}",
         "#eg-chat-panel{display:none;position:absolute;right:0;bottom:70px;width:min(340px,calc(100vw - 28px));height:min(560px,calc(100vh - 120px));max-height:min(560px,calc(100vh - 120px));background:#111;border:1px solid #3a3120;border-radius:10px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.6)}",
         "#eg-chat.open #eg-chat-panel{display:flex;flex-direction:column}",
         ".eg-chat-head{background:#1b1b1b;border-bottom:1px solid #3a3120;padding:14px 16px;display:flex;justify-content:space-between;gap:12px;align-items:center}",
@@ -273,7 +273,7 @@
         ".eg-options button:hover,.eg-whatsapp:hover{border-color:#C9A84C;color:#E8C97A}",
         ".eg-chat-foot{padding:0 14px 14px}",
         ".eg-whatsapp{display:block;background:#1f3b2a;border-color:#2f7044;color:#dfffe8;text-align:center;font-weight:700}",
-        "@media(max-width:640px){#eg-chat{right:14px;bottom:154px}#eg-chat-panel{right:-4px;width:calc(100vw - 20px);height:min(68vh,560px);max-height:68vh}#eg-chat-toggle{width:56px;height:56px}}"
+        "@media(max-width:640px){#eg-chat{right:14px;bottom:154px}#eg-chat-panel{right:-4px;width:calc(100vw - 20px);height:min(68vh,560px);max-height:68vh}#eg-chat-toggle{width:48px;height:48px}}"
       ].join("");
       document.head.appendChild(style);
 
