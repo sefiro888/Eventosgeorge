@@ -229,7 +229,6 @@
         ".sf-grid{display:grid!important;grid-template-columns:1fr!important;gap:30px!important}",
         ".sf-tag{max-width:100%!important}",
         ".sf-links a,.sf-contact a{overflow-wrap:anywhere!important}",
-        "body.eg-has-budget-form .wa,body.eg-has-budget-form #eg-chat{display:none!important}",
         ".wa{right:14px!important;bottom:14px!important;width:56px!important;height:56px!important}",
         "#eg-chat{right:14px!important;bottom:154px!important}",
         "#eg-chat-panel{right:-4px!important;width:calc(100vw - 20px)!important;max-width:calc(100vw - 20px)!important}",
@@ -254,20 +253,27 @@
       var style = document.createElement("style");
       style.textContent = [
         "#eg-chat{position:fixed;right:18px;bottom:154px;z-index:9998;font-family:Arial,sans-serif;color:#f8f3ec}",
-        "#eg-chat-toggle{width:56px;height:56px;border-radius:50%;background:#C9A84C;color:#060606;border:0;box-shadow:0 8px 28px rgba(0,0,0,.45);font-size:24px;font-weight:700}",
-        "#eg-chat-panel{display:none;position:absolute;right:0;bottom:70px;width:min(340px,calc(100vw - 28px));max-height:min(560px,calc(100vh - 120px));background:#111;border:1px solid #3a3120;border-radius:10px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.6)}",
+        "#eg-chat-toggle{position:relative;width:56px;height:56px;border-radius:50%;background:radial-gradient(circle at 34% 28%,#F5DEA0 0,#D4AE58 42%,#9A7125 78%,#5E4314 100%);color:#211706;border:1px solid rgba(255,241,188,.9);font-family:Georgia,'Times New Roman',serif;font-size:31px;font-weight:400;line-height:1;display:grid;place-items:center;box-shadow:0 0 0 1px rgba(89,60,14,.9),0 0 0 5px rgba(201,168,76,.13),0 10px 30px rgba(0,0,0,.55),0 0 22px rgba(201,168,76,.3);transition:transform .25s,box-shadow .25s;animation:egHelpPulse 3.8s ease-in-out infinite}",
+        "#eg-chat-toggle::before{content:'';position:absolute;inset:-5px;border:1px solid rgba(232,201,122,.48);border-radius:50%;pointer-events:none;animation:egHelpHalo 3.8s ease-in-out infinite}",
+        "#eg-chat-toggle::after{content:'✦';position:absolute;top:-7px;right:-3px;color:#FFF0B5;font-family:Georgia,serif;font-size:12px;text-shadow:0 0 8px rgba(255,226,135,.95);animation:egHelpSpark 2.8s ease-in-out infinite}",
+        "#eg-chat-toggle:hover{transform:scale(1.08);box-shadow:0 0 0 1px rgba(89,60,14,.9),0 0 0 7px rgba(201,168,76,.2),0 12px 34px rgba(0,0,0,.6),0 0 28px rgba(201,168,76,.5)}",
+        "#eg-chat-toggle span{display:block;transform:translateY(-1px)}",
+        "@keyframes egHelpPulse{0%,100%{box-shadow:0 0 0 1px rgba(89,60,14,.9),0 0 0 5px rgba(201,168,76,.13),0 10px 30px rgba(0,0,0,.55),0 0 22px rgba(201,168,76,.3)}50%{box-shadow:0 0 0 1px rgba(89,60,14,.9),0 0 0 8px rgba(201,168,76,.22),0 12px 34px rgba(0,0,0,.6),0 0 30px rgba(201,168,76,.48)}}",
+        "@keyframes egHelpHalo{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}",
+        "@keyframes egHelpSpark{0%,100%{opacity:.35;transform:scale(.8) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(18deg)}}",
+        "#eg-chat-panel{display:none;position:absolute;right:0;bottom:70px;width:min(340px,calc(100vw - 28px));height:min(560px,calc(100vh - 120px));max-height:min(560px,calc(100vh - 120px));background:#111;border:1px solid #3a3120;border-radius:10px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.6)}",
         "#eg-chat.open #eg-chat-panel{display:flex;flex-direction:column}",
         ".eg-chat-head{background:#1b1b1b;border-bottom:1px solid #3a3120;padding:14px 16px;display:flex;justify-content:space-between;gap:12px;align-items:center}",
         ".eg-chat-title{font-size:14px;font-weight:700;color:#E8C97A}.eg-chat-sub{font-size:12px;color:#aaa;margin-top:2px}",
         ".eg-chat-close{background:transparent;border:0;color:#aaa;font-size:22px}",
-        ".eg-chat-body{padding:14px;overflow:auto;display:flex;flex-direction:column;gap:10px}",
-        ".eg-msg{font-size:13px;line-height:1.45;padding:10px 12px;border-radius:8px;max-width:88%}",
+        ".eg-chat-body{padding:14px;overflow:auto;display:flex;flex:1 1 auto;min-height:0;flex-direction:column;gap:10px}",
+        ".eg-msg{font-size:13px;line-height:1.45;padding:10px 12px;border-radius:8px;max-width:88%;overflow-wrap:anywhere;flex:0 0 auto}",
         ".eg-bot{background:#202020;border:1px solid #303030;align-self:flex-start}.eg-user{background:#C9A84C;color:#070707;align-self:flex-end}",
-        ".eg-options{display:grid;gap:8px;padding:0 14px 14px}.eg-options button,.eg-whatsapp{background:#181818;border:1px solid #3a3120;color:#f8f3ec;padding:11px 12px;border-radius:8px;text-align:left;font-size:13px;text-decoration:none}",
+        ".eg-options{display:grid;gap:8px;padding:0 14px 14px;flex:0 0 auto;max-height:210px;overflow:auto}.eg-options button,.eg-whatsapp{background:#181818;border:1px solid #3a3120;color:#f8f3ec;padding:11px 12px;border-radius:8px;text-align:left;font-size:13px;text-decoration:none}",
         ".eg-options button:hover,.eg-whatsapp:hover{border-color:#C9A84C;color:#E8C97A}",
         ".eg-chat-foot{padding:0 14px 14px}",
         ".eg-whatsapp{display:block;background:#1f3b2a;border-color:#2f7044;color:#dfffe8;text-align:center;font-weight:700}",
-        "@media(max-width:640px){#eg-chat{right:14px;bottom:154px}#eg-chat-panel{right:-4px;width:calc(100vw - 20px);max-height:68vh}#eg-chat-toggle{width:56px;height:56px}}"
+        "@media(max-width:640px){#eg-chat{right:14px;bottom:154px}#eg-chat-panel{right:-4px;width:calc(100vw - 20px);height:min(68vh,560px);max-height:68vh}#eg-chat-toggle{width:56px;height:56px}}"
       ].join("");
       document.head.appendChild(style);
 
@@ -280,7 +286,7 @@
         '<div class="eg-options" id="eg-chat-options"></div>',
         '<div class="eg-chat-foot"><a class="eg-whatsapp" id="eg-chat-wa" target="_blank" rel="noopener">Hablar por WhatsApp</a></div>',
         '</div>',
-        '<button id="eg-chat-toggle" type="button" aria-label="Abrir ayuda">?</button>'
+        '<button id="eg-chat-toggle" type="button" aria-label="Abrir ayuda y presupuesto" title="Abrir ayuda y presupuesto"><span aria-hidden="true">?</span></button>'
       ].join("");
       document.body.appendChild(chat);
 
