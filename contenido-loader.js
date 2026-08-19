@@ -230,8 +230,8 @@
         ".sf-tag{max-width:100%!important}",
         ".sf-links a,.sf-contact a{overflow-wrap:anywhere!important}",
         "body.eg-has-budget-form .wa,body.eg-has-budget-form #eg-chat{display:none!important}",
-        ".wa{right:14px!important;bottom:14px!important;width:50px!important;height:50px!important}",
-        "#eg-chat{right:14px!important;bottom:84px!important}",
+        ".wa{right:14px!important;bottom:14px!important;width:56px!important;height:56px!important}",
+        "#eg-chat{right:14px!important;bottom:154px!important}",
         "#eg-chat-panel{right:-4px!important;width:calc(100vw - 20px)!important;max-width:calc(100vw - 20px)!important}",
         "}",
         "@media(max-width:420px){",
@@ -253,7 +253,7 @@
 
       var style = document.createElement("style");
       style.textContent = [
-        "#eg-chat{position:fixed;right:18px;bottom:88px;z-index:9998;font-family:Arial,sans-serif;color:#f8f3ec}",
+        "#eg-chat{position:fixed;right:18px;bottom:154px;z-index:9998;font-family:Arial,sans-serif;color:#f8f3ec}",
         "#eg-chat-toggle{width:56px;height:56px;border-radius:50%;background:#C9A84C;color:#060606;border:0;box-shadow:0 8px 28px rgba(0,0,0,.45);font-size:24px;font-weight:700}",
         "#eg-chat-panel{display:none;position:absolute;right:0;bottom:70px;width:min(340px,calc(100vw - 28px));max-height:min(560px,calc(100vh - 120px));background:#111;border:1px solid #3a3120;border-radius:10px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.6)}",
         "#eg-chat.open #eg-chat-panel{display:flex;flex-direction:column}",
@@ -267,7 +267,7 @@
         ".eg-options button:hover,.eg-whatsapp:hover{border-color:#C9A84C;color:#E8C97A}",
         ".eg-chat-foot{padding:0 14px 14px}",
         ".eg-whatsapp{display:block;background:#1f3b2a;border-color:#2f7044;color:#dfffe8;text-align:center;font-weight:700}",
-        "@media(max-width:640px){#eg-chat{right:14px;bottom:84px}#eg-chat-panel{right:-4px;width:calc(100vw - 20px);max-height:68vh}#eg-chat-toggle{width:54px;height:54px}}"
+        "@media(max-width:640px){#eg-chat{right:14px;bottom:154px}#eg-chat-panel{right:-4px;width:calc(100vw - 20px);max-height:68vh}#eg-chat-toggle{width:56px;height:56px}}"
       ].join("");
       document.head.appendChild(style);
 
