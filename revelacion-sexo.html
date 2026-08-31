@@ -126,6 +126,14 @@
 <details><summary>¿Cómo reservo?</summary><div class="faq-a">Escríbenos por WhatsApp o desde el formulario indicando fecha aproximada, localidad y cómo imagináis la sorpresa.</div></details>
 </div></div></section>
 </main>
+<div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true" role="dialog" aria-label="Imagen ampliada">
+  <button class="gallery-lightbox-close" type="button" aria-label="Cerrar imagen ampliada">×</button>
+  <button class="gallery-lightbox-nav gallery-lightbox-prev" type="button" aria-label="Imagen anterior">‹</button>
+  <img src="" alt="">
+  <button class="gallery-lightbox-nav gallery-lightbox-next" type="button" aria-label="Imagen siguiente">›</button>
+  <div class="gallery-lightbox-count"></div>
+  <div class="gallery-lightbox-caption"></div>
+</div>
 <footer class="site-footer">
   <div class="sf-grid">
     <div>
@@ -159,6 +167,32 @@
   </div>
 </footer>
 <script>function toggleNav(){const ul=document.querySelector('.nm');ul.style.display=ul.style.display==='flex'?'':'flex';if(ul.style.display==='flex'){ul.style.cssText='display:flex;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:rgba(6,6,6,.98);padding:20px 28px;gap:4px;border-bottom:1px solid #2E2E2E;z-index:499;align-items:stretch;';}}</script>
+<script>
+const galleryLightbox=document.getElementById('galleryLightbox');
+if(galleryLightbox){
+  const lightboxImg=galleryLightbox.querySelector('img');
+  const lightboxCaption=galleryLightbox.querySelector('.gallery-lightbox-caption');
+  const lightboxCount=galleryLightbox.querySelector('.gallery-lightbox-count');
+  const galleryImages=[...document.querySelectorAll('.photo-gallery .photo-card img')];
+  let currentGalleryIndex=0;
+  const renderLightbox=()=>{const img=galleryImages[currentGalleryIndex];if(!img)return;lightboxImg.src=img.currentSrc||img.src;lightboxImg.alt=img.alt||'Imagen ampliada de Eventos George';lightboxCaption.textContent=img.alt||'';lightboxCount.textContent=(currentGalleryIndex+1)+' / '+galleryImages.length};
+  const showLightbox=index=>{currentGalleryIndex=index;renderLightbox();galleryLightbox.classList.add('open');galleryLightbox.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'};
+  const closeLightbox=()=>{galleryLightbox.classList.remove('open');galleryLightbox.setAttribute('aria-hidden','true');document.body.style.overflow='';lightboxImg.removeAttribute('src');lightboxImg.alt=''};
+  const moveLightbox=step=>{currentGalleryIndex=(currentGalleryIndex+step+galleryImages.length)%galleryImages.length;renderLightbox()};
+  galleryImages.forEach((img,index)=>{
+    img.tabIndex=0;
+    img.setAttribute('role','button');
+    img.setAttribute('aria-label','Ampliar imagen');
+    const open=()=>showLightbox(index);
+    img.addEventListener('click',open);
+    img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}});
+  });
+  galleryLightbox.querySelector('.gallery-lightbox-prev').addEventListener('click',e=>{e.stopPropagation();moveLightbox(-1)});
+  galleryLightbox.querySelector('.gallery-lightbox-next').addEventListener('click',e=>{e.stopPropagation();moveLightbox(1)});
+  galleryLightbox.addEventListener('click',e=>{if(e.target===galleryLightbox||e.target.closest('.gallery-lightbox-close'))closeLightbox()});
+  document.addEventListener('keydown',e=>{if(!galleryLightbox.classList.contains('open'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')moveLightbox(-1);if(e.key==='ArrowRight')moveLightbox(1)});
+}
+</script>
 <script src="contenido-loader.js?v=6"></script>
 <script src="cookies.js" defer></script>
 </body>
