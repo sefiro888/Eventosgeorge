@@ -2,7 +2,8 @@
 .dt-page .ey{color:#f0bd58}
 .dt-page .breadcrumb{position:relative;z-index:1}
 .dt-hero{min-height:690px;position:relative;display:flex;align-items:center;padding:148px 8vw 92px;overflow:hidden;background:#10090d}
-.dt-hero-image{position:absolute;inset:0;background:url('imagenes/Eventos-george/efectos-especiales/alquiler-detonador-paquete.webp') center 38%/cover no-repeat;opacity:.48;filter:saturate(.9)}
+.dt-hero-image{position:absolute;inset:0;display:block;overflow:hidden;opacity:.72;filter:saturate(1.04)}
+.dt-hero-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 44%}
 .dt-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,7,7,.96),rgba(8,7,7,.78) 49%,rgba(8,7,7,.24)),linear-gradient(0deg,#080707 0,transparent 50%)}
 .dt-hero-content{z-index:1;position:relative;max-width:720px}
 .dt-eyebrow{display:flex;align-items:center;gap:11px;text-transform:uppercase;letter-spacing:.23em;font-size:.68rem;color:#f2bd62;margin-bottom:22px}
@@ -41,9 +42,10 @@
 .dt-kit-grid h3,.dt-steps h3{font:500 1.55rem var(--fd);color:#fff;margin-bottom:10px}
 .dt-kit-grid p,.dt-steps p{font-size:.83rem;font-weight:300;line-height:1.7;color:#989091}
 .dt-scene{padding-top:108px;padding-bottom:108px}
-.dt-scene-image{position:relative;margin:0;border:1px solid rgba(242,194,103,.26);background:#15090f;overflow:hidden}
-.dt-scene-image img{display:block;width:100%;height:auto}
-.dt-scene-image>span{position:absolute;bottom:0;left:0;right:0;padding:25px 18px 15px;background:linear-gradient(transparent,rgba(0,0,0,.78));font-size:.65rem;letter-spacing:.08em;color:#fff;text-transform:uppercase}
+.dt-color-gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.dt-color-gallery figure{position:relative;margin:0;overflow:hidden;border:1px solid rgba(242,194,103,.26);background:#15090f}
+.dt-color-gallery img{display:block;width:100%;height:auto}
+.dt-color-gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 12px;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff;text-align:center;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
 .dt-scene-copy ul{list-style:none;margin:22px 0 28px;display:grid;gap:10px}
 .dt-scene-copy li{position:relative;padding-left:22px;color:#b4abad;font-size:.86rem;font-weight:300}
 .dt-scene-copy li::before{content:"✦";position:absolute;left:0;color:#e9b85e;font-size:.64rem;top:4px}
