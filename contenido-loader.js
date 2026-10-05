@@ -66,8 +66,8 @@
       replaceLastChildText(link, instagramText);
     });
 
-    document.querySelectorAll('a[href*="wa.me"], .wa').forEach(function (link) {
-      if (whatsapp && link.href.indexOf("?text=") === -1) {
+    document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com/send"], .wa').forEach(function (link) {
+      if (whatsapp && !/[?&]text=/.test(link.href)) {
         link.href = "https://wa.me/" + whatsapp + (whatsappMessage ? "?text=" + whatsappMessage : "");
       }
     });
