@@ -54,6 +54,19 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
 
 /* MAIN LAYOUT */
 .page-body{padding:80px 80px}
+.mundialito-promo{display:grid;grid-template-columns:minmax(280px,.82fr) minmax(360px,1.18fr);align-items:center;gap:clamp(36px,6vw,82px);max-width:1440px;margin:0 auto;padding:88px 80px;background:radial-gradient(ellipse at 22% 50%,rgba(201,168,76,.1),transparent 45%),linear-gradient(120deg,#0b0b0b,#14110d 54%,#0a0a0a);border-block:1px solid rgba(201,168,76,.25)}
+.mundialito-poster{max-width:470px;margin:0 auto;background:#080808;border:1px solid rgba(201,168,76,.38);padding:12px;box-shadow:0 24px 70px rgba(0,0,0,.48)}
+.mundialito-poster img{width:100%;height:auto;max-height:590px;object-fit:contain}
+.mundialito-poster figcaption{padding:12px 8px 4px;text-align:center;color:var(--t2);font-size:.72rem;letter-spacing:.04em}
+.mundialito-copy h2{font-family:var(--fd);font-size:clamp(2.5rem,4.4vw,4.5rem);font-weight:300;line-height:1.03;color:var(--white);margin:0 0 20px}
+.mundialito-copy h2 em{color:var(--gl);font-style:italic}
+.mundialito-copy>p{max-width:650px;color:var(--t1);font-size:.98rem;font-weight:300;line-height:1.85;margin:0 0 15px}
+.mundialito-facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0 28px}
+.mundialito-facts div{padding:13px 15px;border:1px solid rgba(201,168,76,.22);background:rgba(0,0,0,.18)}
+.mundialito-facts small{display:block;color:var(--gold);font-size:.6rem;letter-spacing:.17em;text-transform:uppercase;margin-bottom:4px}
+.mundialito-facts strong{color:#eee5d3;font-size:.82rem;font-weight:500}
+.mundialito-follow{display:inline-flex;align-items:center;justify-content:center;gap:11px;background:var(--gg);color:var(--black);font-size:.72rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;padding:16px 22px;border-radius:2px;box-shadow:var(--gs);transition:transform .25s,box-shadow .25s}
+.mundialito-follow:hover{transform:translateY(-2px);box-shadow:0 12px 38px rgba(201,168,76,.38)}
 .sec-title{font-family:var(--fd);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--white);line-height:1.15;margin-bottom:14px}
 .sec-title em{font-style:italic;color:var(--gl)}
 .sec-lead{font-size:.92rem;color:var(--t1);line-height:1.88;max-width:600px;margin-bottom:48px;font-weight:300}
@@ -182,6 +195,7 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
   #nav{padding:0 28px}.nm{display:none}.nham{display:flex}
   .page-hero-content{padding:0 32px 48px}
   .page-body{padding:60px 32px}
+  .mundialito-promo{padding:72px 32px;gap:32px}
   .services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .home-carousel-slide{flex-basis:33.3333%}
   .info-grid{grid-template-columns:1fr;gap:36px}
@@ -192,6 +206,7 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
 }
 @media(max-width:640px){
   .ig{right:14px!important}
+  .wa-tip{display:none!important}
   #nav{padding:0 18px}.ncta{display:none}
   .home-hero-content{padding:0 20px 72px!important}
   .home-hero-actions{display:grid!important;grid-template-columns:1fr;gap:12px!important}
@@ -204,6 +219,12 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
   .home-carousel-next{right:6px}
   .page-hero-content{padding:0 20px 40px}
   .page-body{padding:48px 20px}
+  .mundialito-promo{grid-template-columns:1fr;gap:32px;padding:54px 20px}
+  .mundialito-poster{max-width:390px;padding:8px}
+  .mundialito-poster img{max-height:none}
+  .mundialito-copy h2{font-size:clamp(2.55rem,11vw,3.55rem)}
+  .mundialito-facts{grid-template-columns:1fr}
+  .mundialito-follow{width:calc(100% - 76px);margin-right:auto;text-align:center;padding:16px 10px}
   .services-grid{grid-template-columns:1fr}
   .cards-grid{grid-template-columns:1fr}
   .contact-section{padding:28px 20px}
@@ -368,6 +389,26 @@ img{display:block;max-width:100%}a{text-decoration:none}button{cursor:pointer;bo
       <a href="#servicios" style="border:1px solid rgba(255,255,255,.25);color:var(--white);font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;padding:18px 38px;border-radius:2px;transition:all .3s;display:inline-flex;align-items:center;gap:10px" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gl)'" onmouseout="this.style.borderColor='rgba(255,255,255,.25)';this.style.color='var(--white)'">Ver servicios</a>
       <a data-track="instagram_click" href="https://www.instagram.com/eventosgeorge73" target="_blank" rel="noopener" style="border:1px solid rgba(255,255,255,.25);color:var(--white);font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;padding:18px 38px;border-radius:2px;transition:all .3s;display:inline-flex;align-items:center;gap:10px" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gl)'" onmouseout="this.style.borderColor='rgba(255,255,255,.25)';this.style.color='var(--white)'">Instagram</a>
     </div>
+  </div>
+</section>
+
+<section class="mundialito-promo" aria-labelledby="mundialito-title">
+  <figure class="mundialito-poster">
+    <img src="imagenes/Eventos-george/mundialito-beach-soccer-andalucia-2026.jpg" alt="Cartel del Mundialito Beach Soccer Andalucía 2026 en El Puerto de Santa María, del 9 al 11 de octubre, con entrada gratuita" width="1639" height="2048" loading="lazy">
+    <figcaption>Mundialito Beach Soccer Andalucía · El Puerto de Santa María 2026</figcaption>
+  </figure>
+  <div class="mundialito-copy">
+    <div class="ey">Evento deportivo · 9–11 de octubre</div>
+    <h2 id="mundialito-title">El fútbol playa se vive en <em>El Puerto</em></h2>
+    <p>El Mundialito Beach Soccer Andalucía 2026 reúne tres días de fútbol playa en la Real Plaza de Toros de El Puerto de Santa María. La entrada es gratuita.</p>
+    <p>¿Quieres seguir el ambiente, las jugadas y los momentos del evento? Visita el canal de TikTok del Mundialito y acompaña el torneo desde allí.</p>
+    <div class="mundialito-facts" aria-label="Datos del evento">
+      <div><small>Fechas</small><strong>9–11 de octubre de 2026</strong></div>
+      <div><small>Lugar</small><strong>Real Plaza de Toros · El Puerto</strong></div>
+      <div><small>Acceso</small><strong>Entrada gratuita</strong></div>
+      <div><small>En TikTok</small><strong>@futbolplayarfef</strong></div>
+    </div>
+    <a class="mundialito-follow" data-track="tiktok_event_click" href="https://www.tiktok.com/@futbolplayarfef" target="_blank" rel="noopener noreferrer" aria-label="Seguir el canal del Mundialito en TikTok, @futbolplayarfef">Seguir el canal del evento en TikTok <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 
