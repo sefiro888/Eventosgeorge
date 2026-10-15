@@ -37,3 +37,20 @@
 @media(max-width:950px){.hero-run-feature{grid-template-columns:minmax(250px,.75fr) minmax(340px,1fr);gap:32px}.hero-run-section{padding:74px 28px}}
 @media(max-width:760px){.hero-run-section{padding:66px 22px}.hero-run-feature{grid-template-columns:1fr;gap:38px}.hero-run-player{width:min(100%,390px)}.hero-run-copy{max-width:680px;margin:auto}.hero-run-copy h2{font-size:clamp(2.8rem,11vw,4rem)}.hero-run-clip-section{padding:58px 22px}.hero-run-clip-feature{grid-template-columns:1fr;gap:28px}.hero-run-clip-copy{max-width:680px;margin:auto}.hero-run-player--wide{width:100%;max-width:680px;aspect-ratio:848/464}}
 @media(max-width:760px){.mundialito-speaker-callout{align-items:flex-start;flex-direction:column;padding:26px 22px;gap:22px}.mundialito-speaker-callout>a{width:100%;text-align:center}}
+
+.mundialito-videos-section{padding:78px 7vw;background:linear-gradient(180deg,#090909,#11100d 52%,#090909);border-block:1px solid rgba(201,168,76,.22)}
+.mundialito-videos-intro{max-width:850px;margin:0 auto 38px;text-align:center}
+.mundialito-videos-intro h2{font:300 clamp(2.5rem,4.4vw,4rem)/1.04 var(--fd);color:var(--white);margin:0 0 15px}
+.mundialito-videos-intro h2 em{color:var(--gl);font-style:italic}
+.mundialito-videos-intro p{max-width:680px;margin:0 auto;color:#bbb;font-size:.95rem;line-height:1.8;font-weight:300}
+.mundialito-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:1240px;margin:0 auto}
+.mundialito-video-card{overflow:hidden;background:linear-gradient(145deg,#15130f,#0c0c0c 65%);border:1px solid rgba(201,168,76,.25);box-shadow:0 18px 48px rgba(0,0,0,.25)}
+.mundialito-video-frame{aspect-ratio:16/9;background:#030303}
+.mundialito-video-frame iframe{display:block;width:100%;height:100%;border:0}
+.mundialito-video-copy{padding:22px 24px 24px}
+.mundialito-video-category{color:var(--gold);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase}
+.mundialito-video-copy h3{font:400 clamp(1.45rem,2.1vw,1.9rem)/1.15 var(--fd);color:var(--white);margin:9px 0 10px}
+.mundialito-video-copy p{color:#bdb9b1;font-size:.84rem;line-height:1.75;font-weight:300;margin:0 0 16px}
+.mundialito-video-copy>a{display:inline-block;color:var(--gl);font-size:.76rem;border-bottom:1px solid rgba(232,201,122,.4);padding-bottom:4px}
+.mundialito-video-copy>a:hover{color:#fff}
+@media(max-width:760px){.mundialito-videos-section{padding:58px 20px}.mundialito-video-grid{grid-template-columns:1fr;gap:18px}.mundialito-video-copy{padding:19px 19px 22px}}
