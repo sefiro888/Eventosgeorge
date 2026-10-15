@@ -1,0 +1,49 @@
+.home-halloween{display:grid;grid-template-columns:minmax(220px,.62fr) minmax(0,1.38fr);gap:clamp(30px,6vw,80px);align-items:center;padding:74px max(7vw,32px);background:radial-gradient(ellipse at 78% 45%,rgba(128,15,23,.28),transparent 47%),linear-gradient(125deg,#090707,#17100f 60%,#090909);border-block:1px solid rgba(201,168,76,.25)}
+.home-halloween-poster{display:block;width:min(100%,330px);justify-self:center;padding:8px;background:#0d0909;border:1px solid rgba(201,168,76,.35);box-shadow:0 22px 64px rgba(0,0,0,.46)}
+.home-halloween-poster img{display:block;width:100%;height:auto}
+.home-halloween-copy{max-width:760px}
+.home-halloween-copy h2{font:300 clamp(2.5rem,4.5vw,4.4rem)/1.06 var(--fd);color:#fff;margin:0 0 18px}
+.home-halloween-copy h2 em{color:#e4b76a}
+.home-halloween-copy>p{max-width:680px;color:#d0c9c3;font-size:.98rem;line-height:1.85;font-weight:300;margin:0 0 22px}
+.home-halloween-facts{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 28px}
+.home-halloween-facts span{padding:10px 13px;border:1px solid rgba(201,168,76,.22);background:rgba(0,0,0,.2);color:#d8d0c8;font-size:.8rem}
+.home-halloween-facts strong{color:#fff0d8;font-weight:500}
+.home-halloween-cta{display:inline-flex;align-items:center;gap:12px;padding:15px 20px;background:linear-gradient(135deg,#c9a84c,#e8c97a 45%,#d4a843);color:#080808;font-size:.7rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.home-halloween-cta:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.monasterio-hero{position:relative;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.72fr);gap:clamp(36px,6vw,84px);align-items:center;padding:126px 7vw 74px;background:radial-gradient(ellipse at 18% 30%,rgba(146,12,22,.2),transparent 45%),linear-gradient(125deg,#090707,#17100f 56%,#090909);border-bottom:1px solid rgba(201,168,76,.25)}
+.monasterio-hero-copy{max-width:760px}
+.monasterio-hero .ey{color:#e7b86a}
+.monasterio-hero h1{font-size:clamp(3rem,6.5vw,5.7rem);margin-bottom:18px}
+.monasterio-hero h1 em,.monasterio-section h2 em{color:#e4b76a;font-style:italic}
+.monasterio-hero-copy>p{max-width:680px;color:#d0c9c3;font-weight:300;font-size:1rem;line-height:1.9;margin-bottom:22px}
+.monasterio-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:25px 0 28px}
+.monasterio-fact{padding:13px 15px;border:1px solid rgba(201,168,76,.25);background:rgba(0,0,0,.28)}
+.monasterio-fact small{display:block;color:#e4b76a;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px}
+.monasterio-fact strong{color:#fff3e1;font-weight:500;font-size:.86rem;line-height:1.4}
+.monasterio-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.monasterio-secondary{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(232,201,122,.4);padding:15px 20px;color:#f0d7a1;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.monasterio-poster{max-width:430px;width:100%;justify-self:center;padding:10px;background:#0d0909;border:1px solid rgba(201,168,76,.4);box-shadow:0 28px 80px rgba(0,0,0,.55)}
+.monasterio-poster img{display:block;width:100%;height:auto}
+.monasterio-section{padding:76px 7vw;background:#0a0909;border-bottom:1px solid rgba(201,168,76,.14)}
+.monasterio-section-inner{max-width:1200px;margin:0 auto}
+.monasterio-section h2{font:300 clamp(2.35rem,4vw,3.8rem)/1.05 var(--fd);color:#fff;margin:0 0 17px}
+.monasterio-section .monasterio-lead{max-width:800px;color:#c8c0b8;font-size:.98rem;line-height:1.85;font-weight:300;margin-bottom:32px}
+.monasterio-story{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.65fr);gap:clamp(28px,6vw,74px);align-items:center}
+.monasterio-story-copy p{color:#c8c0b8;font-size:.94rem;line-height:1.85;font-weight:300;margin:0 0 15px}
+.monasterio-story-card{padding:28px;background:linear-gradient(140deg,rgba(128,15,23,.2),rgba(201,168,76,.06));border:1px solid rgba(201,168,76,.27)}
+.monasterio-story-card h3{font:400 1.55rem/1.2 var(--fd);color:#fff;margin-bottom:12px}
+.monasterio-story-card p{color:#c8c0b8;font-size:.88rem;line-height:1.75;margin-bottom:14px}
+.monasterio-story-card a{color:#e8c97a;border-bottom:1px solid rgba(232,201,122,.35);font-size:.76rem;padding-bottom:3px}
+.monasterio-invitation{display:grid;grid-template-columns:minmax(0,.82fr) minmax(320px,.7fr);gap:clamp(32px,7vw,86px);align-items:center;max-width:1120px;margin:0 auto}
+.monasterio-invitation-copy p{max-width:610px;color:#c8c0b8;font-size:.94rem;line-height:1.85;font-weight:300}
+.monasterio-invitation-player{width:min(100%,380px);justify-self:center;background:#050505;border:1px solid rgba(201,168,76,.38);box-shadow:0 24px 70px rgba(0,0,0,.5)}
+.monasterio-invitation-player video{display:block;width:100%;height:auto;max-height:76vh;background:#050505;object-fit:contain}
+.monasterio-gallery{columns:3 240px;column-gap:16px}
+.monasterio-photo{break-inside:avoid;margin:0 0 16px;padding:7px;background:#111;border:1px solid rgba(201,168,76,.2)}
+.monasterio-photo img{display:block;width:100%;height:auto}
+.monasterio-photo figcaption{padding:9px 7px 4px;color:#aaa;font-size:.7rem;line-height:1.5}
+.monasterio-faq{max-width:900px}
+.monasterio-credits{display:flex;gap:10px 25px;flex-wrap:wrap;margin-top:28px;padding-top:20px;border-top:1px solid rgba(201,168,76,.2);color:#a9a29a;font-size:.75rem}
+.monasterio-credits strong{color:#ead3a5;font-weight:500}
+@media(max-width:850px){.home-halloween{grid-template-columns:1fr;padding:54px 24px;gap:30px}.home-halloween-poster{width:min(78%,330px)}.home-halloween-copy h2{font-size:clamp(2.45rem,10vw,3.5rem)}.monasterio-hero{grid-template-columns:1fr;padding:112px 24px 54px}.monasterio-poster{max-width:390px}.monasterio-invitation{grid-template-columns:1fr}.monasterio-invitation-copy{max-width:680px;margin:auto}.monasterio-invitation-player{width:min(100%,360px)}.monasterio-story{grid-template-columns:1fr}}
+@media(max-width:640px){.monasterio-hero{padding:102px 20px 44px}.monasterio-hero h1{font-size:clamp(2.8rem,13vw,4rem)}.monasterio-facts{gap:8px}.monasterio-fact{padding:11px}.monasterio-fact strong{font-size:.8rem}.monasterio-actions{align-items:stretch;flex-direction:column}.monasterio-actions a{text-align:center}.monasterio-section{padding:56px 20px}.monasterio-gallery{columns:2 145px;column-gap:10px}.monasterio-photo{margin-bottom:10px;padding:5px}.monasterio-photo figcaption{font-size:.65rem}.monasterio-credits{display:grid;gap:8px}}
