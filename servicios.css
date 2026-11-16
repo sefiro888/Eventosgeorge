@@ -38,7 +38,7 @@ h1 em{font-style:italic;color:var(--gl)}
 .photo-card.video-card{grid-column:span 2;min-height:360px}
 .photo-card.video-card video{min-height:360px}
 .photo-card.video-card video{object-fit:contain}
-.photo-card.video-card.vertical-video{min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px}
+.photo-card.video-card.vertical-video{grid-column:1/-1;width:min(100%,520px);justify-self:center;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px}
 .photo-card.video-card.vertical-video video{width:min(100%,390px);height:auto;max-height:70vh;min-height:0;aspect-ratio:9/16;object-fit:contain}
 .video-caption{width:100%;padding:12px 15px;color:var(--gl);font-size:.76rem;letter-spacing:.06em;text-align:center;border-top:1px solid var(--db)}
 .video-copy{align-self:center}
